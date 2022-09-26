@@ -1,0 +1,82 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.pie{
+    background-color: #99bf93;
+}
+img{
+    width: 50px;
+}
+#logo_empresa{
+    display: flex;
+    align-items: center;
+    font-family: Helvetica;
+    grid-gap: 10px;
+}
+.redes span{
+    font-size: 30px;
+ }
+ #fb,#tw,#in,#lin{
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 50px;
+    color: gray;
+}
+.parte_empresa{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+#logo_empresa p{
+    color: white;
+    text-transform:uppercase;
+    font-size: 18px;
+}
+.seccion{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    grid-gap: 50px;
+}
+.seccion div{
+    display: flex;
+    flex-direction: column;
+}
+div h2{
+    color: white;
+    font-family: Helvetica;
+    padding: 5px 0;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-family: Helvetica;
+    padding: 5px;
+}
+
+iframe{
+    width:40;
+    height:80;
+    overflow: hidden;
+    align-items: center;
+}
+
+.derechos ul{
+   margin-top: 10px;
+   margin-bottom: 10px;
+   display: flex;
+   justify-content: center;
+   list-style: none;
+}
+
+
+
+
+
+
