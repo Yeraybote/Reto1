@@ -9,10 +9,91 @@
 <meta http-equiv="refresh" content="30" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+<link rel="stylesheet" href="../CSS/style.css">
+
 </head>
 <body>
 
-<!-- cuerpo documento  -->
+    <main>
+<!--
+        <div id="Proximo_desde_parada"></div>
+            <form action="#" method="get">
+                <fieldset>
+                    <label for="origen"> Estacion origen </label> <br>
+                    <select id="origen" name="origen" size="1" class="caja">
+                        <option selected hidden>Seleciona tu parada</option> 
+                        <optgroup label="Linea 1"> </optgroup>
+                            <option value="Parada_1"> &nbsp; Parada 1</option>
+                            <option value="Parada_2"> &nbsp; Parada 1</option>
+                            <option value="Parada_3"> &nbsp; Parada 3</option>
+                        <optgroup label="Linea 2"> </optgroup>
+                            <option value="Parada_4"> &nbsp; Parada 4</option>
+                            <option value="Parada_5"> &nbsp; Parada 5</option>
+                    </select>
+                    <input type="button" value="Buscar" id="busquedaParda" class="button">
+                    <hr>
+                    <div id="resultadosBusqueda">
+
+                    </div>
+                </fieldset>
+            </form>  
+        </div>
+-->
+        <br>
+
+        <div id="origen-destino"> 
+            <form action="#" method="get">
+                <label for="origen"> Estacion origen </label> <br>
+                <select id="origen" name="origen" size="1" class="caja">
+                    <option selected hidden>Selecione una estacion</option> 
+                    <optgroup label="Linea 1"> </optgroup>
+                        <option value="Parada_1"> &nbsp; Parada 1</option>
+                        <option value="Parada_2"> &nbsp; Parada 1</option>
+                        <option value="Parada_3"> &nbsp; Parada 3</option>
+                    <optgroup label="Linea 2"> </optgroup>
+                        <option value="Parada_4"> &nbsp; Parada 4</option>
+                        <option value="Parada_5"> &nbsp; Parada 5</option>
+                </select>
+                <br>
+                <label for="destino"> Estacion destino </label> <br>
+                <select id="destino" name="destino" size="1" class="caja">
+                    <option selected hidden>Selecione una estacion</option> 
+                    <optgroup label="Linea 1"> </optgroup>
+                        <option value="Parada_1"> &nbsp; Parada 1</option>
+                        <option value="Parada_2"> &nbsp; Parada 1</option>
+                        <option value="Parada_3"> &nbsp; Parada 3</option>
+                    <optgroup label="Linea 2"> </optgroup>
+                        <option value="Parada_4"> &nbsp; Parada 4</option>
+                        <option value="Parada_5"> &nbsp; Parada 5</option>
+                </select>
+
+                <input type="button" value="Cambiar Estaciones" class="button">
+
+                <br>
+
+                <label for="destino"> Cuando </label> <br>
+                <select id="destino" name="destino" size="1" class="caja">
+                    <option selected>Viajar ahora</option>
+                    <option value="planificar"> Planificar viaje</option>
+                </select>
+
+                <label for="fecha"> Fecha </label>
+                <input type="date" id="fecha" name="date_control" class="input_f" />
+
+                <br>
+
+                <label for="d_horario"> desde </label> 
+                <input type="time" id="d_horario" name="d_horario" class="input_f" />
+
+                <label for="h_horario"> hasta </label> 
+                <input type="time" id="h_horario" name="h_horario" class="input_f" />
+
+                <input type="button" value="Consultar" class="button">
+        
+            </form>
+        </div>
+
+    </main>
 
 </body>
 </html>

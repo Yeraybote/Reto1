@@ -1,12 +1,6 @@
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 .pie{
     background-color: #7B808C;
+    grid-area: pie;
 }
 img{
     width: 50px;
@@ -19,8 +13,8 @@ img{
 }
 .redes span{
     font-size: 30px;
- }
- #fb,#tw,#in,#lin{
+}
+#fb,#tw,#in,#lin{
     background-color: aliceblue;
     padding: 5px;
     border-radius: 50px;
@@ -28,6 +22,7 @@ img{
 }
 .parte_empresa{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 20px;
     align-items: center;
@@ -42,7 +37,9 @@ img{
     margin-bottom: 10px;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     grid-gap: 50px;
+    padding: 10px;
 }
 .seccion div{
     display: flex;
@@ -59,14 +56,12 @@ a{
     font-family: Helvetica;
     padding: 5px;
 }
-
 iframe{
     width:40;
     height:80;
     overflow: hidden;
     align-items: center;
 }
-
 .derechos ul{
    margin-top: 10px;
    padding-bottom: 10px;
@@ -74,9 +69,25 @@ iframe{
    justify-content: center;
    list-style: none;
 }
-
-
-
-
-
-
+@media (max-width: 800px) {
+    .seccion{
+        flex-wrap: wrap;
+    } 
+    .derechos ul{
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 600px) {
+    .seccion{
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    .seccion div{
+        padding-left: 10%;
+    }
+    .derechos ul{
+        padding-left: 20%;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+}
