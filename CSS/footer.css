@@ -6,7 +6,7 @@
 }
 
 .pie{
-    background-color: #99bf93;
+    background-color: #7B808C;
 }
 img{
     width: 50px;
@@ -69,7 +69,7 @@ iframe{
 
 .derechos ul{
    margin-top: 10px;
-   margin-bottom: 10px;
+   padding-bottom: 10px;
    display: flex;
    justify-content: center;
    list-style: none;
