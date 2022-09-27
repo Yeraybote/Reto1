@@ -23,7 +23,7 @@ form {
 	margin: auto;
 	padding-bottom: 3%;
 	text-align: center;
-	position: fixed;
+	position: absolute;
 	left: 40%;
 	bottom: 30%;
 }
@@ -48,10 +48,11 @@ input[type=text], input[type=password] {
 }
 
 input[type=button] {
+	margin-top: 1%;
 	background-color: #2ecc71;
 	border: none;
 	color: white;
 	text-decoration: none;
 	cursor: pointer;
-	padding: 3% 8% 3% 8%; 
+	padding: 4% 9% 4% 9%; 
 }
