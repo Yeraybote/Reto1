@@ -22,7 +22,7 @@ body {
 main {
     padding: 10%; 
     grid-area: principal;
-    color: #7B808C
+    color: #7B808C;
 }
 /*********************************************************************************************/
 nav{
@@ -44,7 +44,6 @@ nav ul{
     margin-right: 20px;
 }
 nav ul li{
-    font-family: Helvetica;
     display: inline-block;
     line-height: 80px;
     margin: 0 5px;
@@ -59,7 +58,7 @@ nav ul li a{
 }
 li a.activo , 
 li a:hover{
-    background: rgb(138, 134, 134);
+    background: #7B808C;
     transition: 0.5s;
 }
 .check-btn{
@@ -100,7 +99,7 @@ section{
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: rgb(122, 121, 119);
+        background: #7B808C;
         top: 80px;
         left: -100%; /*para corregirlo*/
     }
@@ -126,7 +125,7 @@ section{
 /*********************************************************************************************/
 
 .button {
-    background-color: #71A64B;
+    background-color: #2ecc71;
     border: none;
     color: #E9ECF2;
     padding: 10px 20px;
@@ -138,7 +137,7 @@ section{
     cursor: pointer;
 }
 .button:hover {
-    background-color: #99BF93;
+    background-color: #66d494;
     color: white;
 }
 select {
@@ -158,7 +157,6 @@ select:focus {
     height:30px;
     overflow: hidden;
     width: 230px;
-    position:relative;
 }
 .input_f {
     background: transparent;
@@ -169,5 +167,4 @@ select:focus {
     border:1px solid #d9d9d9;
     height:30px;
     overflow: hidden;
-    position:relative;
 }

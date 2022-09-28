@@ -8,7 +8,6 @@ img{
 #logo_empresa{
     display: flex;
     align-items: center;
-    font-family: Helvetica;
     grid-gap: 10px;
 }
 .redes span{
