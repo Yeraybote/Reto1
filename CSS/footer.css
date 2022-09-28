@@ -2,7 +2,7 @@
     background-color: #7B808C;
     grid-area: pie;
 }
-img{
+.pie img{
     width: 50px;
 }
 #logo_empresa{
