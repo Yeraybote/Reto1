@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="../JS/desplegable.js"></script>
+    <link rel="stylesheet" href="../CSS/fonts.css">
+
     <link rel="stylesheet" href="../CSS/style.css" type="text/css">
     <link rel="stylesheet" href="../CSS/footer.css"  type="text/css">
     <script src="https://kit.fontawesome.com/492d3aa907.js" crossorigin="anonymous"></script>
     <title>Cabecera</title>
 </head>
 <body>
+    <!--CABECERA-->
     <header>
         <nav>
             <input type="checkbox" id="check">
@@ -19,22 +24,29 @@
             <a  class="enlace" href="#" >
                 <img src="../MEDIA/IMAGENES/entrenar.png" alt="imagen tranvia" class="logo_h">
             </a>
-            <ul>
+            <ul class="menu-nav">
                 <li><a class="activo" href="#">INICIO</a></li>
                 <li><a href="#">MAPA</a></li>
                 <li><a href="#">ESTADO DE LA RED</a></li>
-                <li><a href="#">PARADAS</a></li>
-
-            </ul>
+                <li><a href="#">PARADAS<span class="icon-menu3"></span></a>
+                    <ul class="submenu">
+                        <li><a href="#">LINEA 1</a></li>
+                        <li><a href="#">LINEA 2</a></li>
+                    </ul>
+                   
+                </li>
+             </ul>
         </nav>
     </header>
 
+
+
     <main>
-        <section>
+                <section>
 
         </section>
     </main>
-
+<!--FOOTER-->
     <footer class="pie">
         <div class="parte_empresa">
             <div id="logo_empresa">

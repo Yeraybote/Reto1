@@ -25,6 +25,7 @@ main {
     color: #7B808C
 }
 /*********************************************************************************************/
+
 nav{
     background-color: #2ecc71;
     height: 80px;
@@ -52,6 +53,7 @@ nav ul li{
 }
 
 nav ul li a{
+   
     color: white;
     font-size: 1.125em;
     padding: 7px 13px;
@@ -59,6 +61,7 @@ nav ul li a{
 }
 li a.activo , 
 li a:hover{
+
     background: rgb(138, 134, 134);
     transition: 0.5s;
 }
@@ -74,9 +77,17 @@ li a:hover{
 #check{
     display: none;
 }
+.submenu{
+    display:none;
+}
+.submenu li a{
+    display: block;
+}
+
 section{
     height: calc(100vh - 80px);
 }
+
 
 /*Para la tablet*/
 @media (max-width: 952px){
@@ -97,7 +108,7 @@ section{
     ul{
         text-align: center;
         transition: 0.5s;
-        position: fixed;
+        position: absolute;
         width: 100%;
         height: 100vh;
         background: rgb(122, 121, 119);
