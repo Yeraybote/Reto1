@@ -14,7 +14,6 @@ body {
 	background-size: cover;
 	background-color: #2ecc71;
 	background-position: fixed;
-
 	display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, auto);
@@ -24,7 +23,6 @@ body {
 }
 main {
 	grid-area: principal;
-	padding: 20%;
 }
 form {
 	color: #2ecc71;
