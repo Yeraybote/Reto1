@@ -1,6 +1,7 @@
 .pie{
     background-color: #7B808C;
     grid-area: pie;
+    position: relative;
 }
 img{
     width: 50px;
