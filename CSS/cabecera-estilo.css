@@ -10,6 +10,7 @@ nav{
     background-color: #2ecc71;
     height: 80px;
     width: 100%;
+    grid-area: menu;
 }
 .enlace{
     position: absolute;
@@ -55,11 +56,9 @@ li a:hover{
 #check{
     display: none;
 }
+
 section{
     height: calc(100vh - 80px);
-    background: url(../MEDIA/IMAGENES/fondoiniciosesion.jpg);
-    background-size: cover;
-    background-position: center center;
 }
 
 /*Para la tablet*/

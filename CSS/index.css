@@ -24,6 +24,7 @@ body {
 }
 main {
 	grid-area: principal;
+	padding: 20%;
 }
 form {
 	color: #2ecc71;
