@@ -14,7 +14,6 @@ body {
 	background-size: cover;
 	background-color: #2ecc71;
 	background-position: fixed;
-
 	display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, auto);
