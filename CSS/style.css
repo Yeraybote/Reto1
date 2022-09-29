@@ -52,7 +52,6 @@ nav ul li{
 }
 
 nav ul li a{
-   
     color: white;
     font-size: 1.125em;
     padding: 7px 13px;
@@ -75,19 +74,20 @@ li a:hover{
 #check{
     display: none;
 }
-.submenu{
+
+nav li ul {
     display:none;
-}
-.submenu li a{
-    display: block;
+    position:absolute;
 }
 
-/*
-section{
-    height: calc(100vh - 80px);
+nav li:hover > ul {
+    display:block;
+    background-color: #2ecc71;
 }
-*/
 
+.submenu {
+    text-align: center;
+}
 
 /*Para la tablet*/
 @media (max-width: 952px){
