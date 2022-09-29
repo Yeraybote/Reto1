@@ -118,6 +118,32 @@ date2.setMinutes(date2.getMinutes()+mins);
 
 function calcularHoras(abetxuko_florida_horarios,abetxuko_florida){
 
+
+	let parada=prompt("Seleccione la parada");
+
+	let date1=new Date(2022,0,1,0,15);
+	mins=date1.getMinutes();
+
+	let dtext1=abetxuko_florida_horarios[parada].toTimeString();
+	dtext1=dtext1.split(' ')[0];
+
+	document.write("El tranbia destino "+abetxuko_florida[14]+" va apasar por la parada "+abetxuko_florida[parada]+" a las:\n"+
+			dtext1+"\n");
+	
+	let date2=abetxuko_florida_horarios[parada];
+	for (var i = 0; i < 3; i++) {
+		date2.setMinutes(date2.getMinutes()+mins);
+		dtext=abetxuko_florida_horarios[parada].toTimeString();
+		dtext=dtext.split(' ')[0];
+		document.write(dtext+" "+"\n");
+
+	}
+}
+
+function calcularHoras2()
+
+	let actual=new Date();
+
 	let parada=prompt("Seleccione la parada");
 
 	let date1=new Date(2022,0,1,0,15);
@@ -135,6 +161,3 @@ function calcularHoras(abetxuko_florida_horarios,abetxuko_florida){
 		document.write(dtext);
 
 	}
-
-}
-
