@@ -52,7 +52,6 @@ nav ul li{
 }
 
 nav ul li a{
-   
     color: white;
     font-size: 1.125em;
     padding: 7px 13px;
@@ -75,19 +74,24 @@ li a:hover{
 #check{
     display: none;
 }
-.submenu{
+
+nav li ul {
     display:none;
-}
-.submenu li a{
-    display: block;
+    position:absolute;
 }
 
-/*
+nav li:hover > ul {
+    display:block;
+    background-color: #2ecc71;
+}
+
+.submenu {
+    text-align: center;
+}
+
 section{
     height: calc(100vh - 80px);
 }
-*/
-
 
 /*Para la tablet*/
 @media (max-width: 952px){
@@ -110,7 +114,7 @@ section{
         transition: 0.5s;
         position: absolute;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         background: #7B808C;
         top: 80px;
         left: -100%; /*para corregirlo*/
@@ -131,7 +135,16 @@ section{
 
     #check:checked ~ ul{ /*solo cuando esté seleccionado , buscará a ul*/
         left: 0; /*así se va a mostrar*/
+    }
 
+    .submenu {
+        left: 0;
+        top: auto;
+        display: block;
+    }
+
+    .submenu ul li a {
+        background-color: #7B808C;
     }
 }
 /*********************************************************************************************/
