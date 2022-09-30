@@ -20,7 +20,6 @@
     <meta name="keywords" content="tus palabras clave, aqui" />
     <meta name="description" content="breve descripcion del sitio" />
     <meta name="author" content="autor del documento" />
-    <meta http-equiv="refresh" content="30" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="../MEDIA/IMAGENES/favicon.png"/>
     <link rel="stylesheet" href="../CSS/fonts.css">
@@ -58,9 +57,6 @@
         </header>
     
         <main>
-            <section>
-             
-
                 <div class="boton">
                     <!-- Checkbox -->
                     <input type="checkbox" name="boton" id="boton-label" class="boton__checkbox">
@@ -87,7 +83,6 @@
                         </tr>
                     </table>
                 </div>
-                <hr>
                 <div class="contenedor-principal">
                     <div class="via" id="train">
                         
@@ -207,24 +202,32 @@
                 <div id="linea">
                     <div id="paradas">
                         <div class="card">
-                            <form method="post" action="" id="home" name="home">
-                                <input type="submit" value="home" id="boton">
+                            <form method="post" action="" id="home" name="home" onclick="moverhome()">
+                                <input type="button" value="home" id="boton">
                                 <input type="hidden" name='"home"' value="1"> 
                             </form>
                         </div>
                         <div class="card">
                             <td>
-                                <form method="post" action="" id="fc1" name="fc1">
-                                    <input type="submit" value="fc1" id="boton">
+                                <form method="post" action="" id="fc1" name="fc1" onclick="moverp1()">
+                                    <input type="button" value="fc1" id="boton">
                                     <input type="hidden" name='"fc1"' value="1"> 
                                 </form>
                             </td>
                         </div>
                         <div class="card">
                             <td>
-                                <form method="post" action="" id="fc2" name="fc2">
-                                    <input type="submit" value="fc2" id="boton">
+                                <form method="post" action="" id="fc2" name="fc2" onclick="moverp2()">
+                                    <input type="button" value="fc2" id="boton">
                                     <input type="hidden" name='"fc2"' value="1"> 
+                                </form>
+                            </td>
+                        </div>
+                        <div class="card">
+                            <td>
+                                <form method="post" action="" id="fc3" name="fc3" onclick="moverp3()">
+                                    <input type="button" value="fc3" id="boton">
+                                    <input type="hidden" name='"fc3"' value="1"> 
                                 </form>
                             </td>
                         </div>
@@ -261,11 +264,6 @@
                         </tr>
                     </table>
                 </div>
-            </section>
-            <br> <br>
-            <section>
-                       
-            </section>
         </main>
     
         <footer class="pie">
@@ -388,6 +386,5 @@
         </ul>
     </div>
 </footer>
-
 
 </html>
