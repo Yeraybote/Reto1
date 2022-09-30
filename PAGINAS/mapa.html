@@ -15,15 +15,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Tranvia</title>
+    <title>Mapa - Tranv&iacute;a</title>
     <meta charset="UTF-8" />
     <meta name="keywords" content="tus palabras clave, aqui" />
     <meta name="description" content="breve descripcion del sitio" />
     <meta name="author" content="autor del documento" />
     <meta http-equiv="refresh" content="30" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-
+    <link rel="icon" type="image/png" href="../MEDIA/IMAGENES/favicon.png"/>
+    <link rel="stylesheet" href="../CSS/fonts.css">
     <link rel="stylesheet" href="../CSS/style.css"  type="text/css">
     <link rel="stylesheet" href="../CSS/footer.css"  type="text/css">
     <link rel="stylesheet" href="../CSS/menu.css"  type="text/css">
@@ -42,19 +42,29 @@
                 <a  class="enlace" href="#" >
                     <img src="../MEDIA/IMAGENES/entrenar.png" alt="imagen tranvia" class="logo_h">
                 </a>
-                <ul>
-                    <li><a class="activo" href="#">INICIO</a></li>
-                    <li><a href="#">MAPA</a></li>
-                    <li><a href="#">ESTADO DE LA RED</a></li>
-                    <li><a href="#">PARADAS</a></li>
-    
-                </ul>
+                <ul class="menu-nav">
+                    <li><a href="./inicio.html">INICIO</a></li>
+                    <li><a class="activo" href="./mapa.html">MAPA</a></li>
+                    <li class="checked"><a href="#">PARADAS <span class="icon-menu3"></span></a>
+                        <ul class="submenu">
+                            <li><a href="../MEDIA/PDF/abetxukoflorida.pdf">LINEA 1</a></li>
+                            <li><a href="../MEDIA/PDF/ibaiondounibertsitatea.pdf">LINEA 2</a></li>
+                        </ul>
+                    </li>
+                 </ul>
             </nav>
         </header>
     
         <main>
             <section>
                 <h1>Variables Salidas (Web a Ari)</h1>
+
+                <div class="boton">
+                    <!-- Checkbox -->
+                    <input type="checkbox" name="boton" id="boton-label" class="boton__checkbox">
+                    <!-- Botón -->
+                    <label for="boton-label" class="boton__label"></label>
+                </div>
                 <div id="modoUso">
                     <table>
                         <tr>

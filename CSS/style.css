@@ -232,3 +232,45 @@ select:focus {
 table {
     border-spacing: 10px;
   }
+
+
+/*****************************************************************************************/
+/* Boton automatico/manual */
+:root {
+    --color-green: #2ecc71;
+    --color-red: #fe5e41;
+    --color-button: #fdffff;
+    --color-black: white;
+}
+.boton {
+    display: inline-block;
+}
+.boton .boton__checkbox {
+    display: none;
+}
+.boton .boton__label {
+    background-color: var(--color-red);
+    width: 5rem;
+    height: 3rem;
+    border-radius: 3rem;
+    display: inline-block;
+    position: relative;
+}
+.boton .boton__label:before {
+    transition: .2s;
+    display: block;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--color-button);
+    content: '';
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 0px 1px var(--color-black);
+    cursor:pointer;
+}
+.boton .boton__checkbox:checked + .boton__label {
+    background-color: var(--color-green);
+}
+.boton .boton__checkbox:checked + .boton__label:before {
+    transform: translateX(2rem);
+}
