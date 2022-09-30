@@ -6,10 +6,11 @@
 <!-- AWP_In_Variable Name='"emergencia"' -->
 
 <!-- AWP_In_Variable Name='"home"' -->
-<!-- AWP_In_Variable Name='"fc1"' -->
-<!-- AWP_In_Variable Name='"fc2"' -->
+<!-- AWP_In_Variable Name='"p1"' -->
+<!-- AWP_In_Variable Name='"p2"' -->
+<!-- AWP_In_Variable Name='"p3"' -->
 
-<!-- AWP_Enum_Def Name="listado" Values='0:"home", 1:"fc1", 2:"fc2"' -->
+<!-- AWP_Enum_Def Name="listado" Values='0:"home", 1:"p1", 2:"p2", 3:"p3",' -->
 
 
 <!DOCTYPE html>
@@ -23,18 +24,16 @@
     <meta http-equiv="refresh" content="30" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="../MEDIA/IMAGENES/favicon.png"/>
+
     <link rel="stylesheet" href="../CSS/fonts.css">
     <link rel="stylesheet" href="../CSS/style.css"  type="text/css">
     <link rel="stylesheet" href="../CSS/footer.css"  type="text/css">
-    <link rel="stylesheet" href="../CSS/menu.css"  type="text/css">
-    <link rel="stylesheet" href="../CSS/tranvia.css">
+    <link rel="stylesheet" href="../CSS/tranvia.css" type="text/css">
 
     <script src="https://kit.fontawesome.com/492d3aa907.js" crossorigin="anonymous"></script>
-    <script src="../JS/enviar.js"></script>
 </head>
 <body>
-    <body>
-        <header>
+    <header>
             <nav>
                 <input type="checkbox" id="check">
                 <label for="check" class="check-btn">
@@ -54,40 +53,70 @@
                     </li>
                  </ul>
             </nav>
-        </header>
-    
-        <main>
-            <section>
-             
+    </header>
 
-                <div class="boton">
-                    <!-- Checkbox -->
-                    <input type="checkbox" name="boton" id="boton-label" class="boton__checkbox">
-                    <!-- Botón -->
-                    <label for="boton-label" class="boton__label"></label>
-                </div>
+    <main>
+        <section>
+            <article class="variables">
                 <div id="modoUso">
-                    <table>
-                        <tr>
-                            <td>
-                                <form method="post" action="" id="f_automatico" name="f_automatico">
-                                    <input type="submit" value="automatico" class="boton" id="m_automatico">
-                                    <input type="hidden" name='"automatico"' value="1">
-                                    <input type="hidden" name='"manual"' value="0">
-                                </form>
-                            </td>
-                            <td>
-                                <form method="post" action="" id="f_manual" name="f_manual">
-                                    <input type="submit" value="manual" class="boton" id="m_manual">
-                                    <input type="hidden" name='"automatico"' value="1">
-                                    <input type="hidden" name='"manual"' value="0">
-                                </form>
-                            </td>
-                        </tr>
+                    <div class="boton">
+                        <form method="post" action="" id="boton_uso" name="f_automatico">
+                            <label for="automatico" id="automatico">AUTOMATICO</label>
+                            <!-- Checkbox -->
+                            <input type="checkbox" name="boton" id="boton-label" class="boton__checkbox" chec>
+                            <!-- Botón -->
+                            <label for="boton-label" class="boton__label"></label>
+                            <label for="manual" id="manual">MANUAL</label>
+                        </form>
+                    </div>
+                    <table style="visibility: hidden;">
+                                <tr>
+                                    <td>
+                                        <form method="post" action="" id="f_automatico" name="f_automatico">
+                                            <input type="submit" value="automatico" class="boton" id="m_automatico">
+                                            <input type="hidden" name='"automatico"' value="1">
+                                            <input type="hidden" name='"manual"' value="0">
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form method="post" action="" id="f_manual" name="f_manual">
+                                            <input type="submit" value="manual" class="boton" id="m_manual">
+                                            <input type="hidden" name='"automatico"' value="1">
+                                            <input type="hidden" name='"manual"' value="0">
+                                        </form>
+                                    </td>
+                                </tr>
                     </table>
-                </div>
-                <hr>
-                <div class="contenedor-principal">
+                    </div>
+                    <div class="estados">
+                        <table>
+                            <tr>
+                                <td>
+                                    <form method="post" action="" id="marcha" name="arranca">
+                                        <input type="submit" value="marcha" id="boton">
+                                        <input type="hidden" name='"marcha"' value="1">
+                                        <input type="hidden" name='"paro"' value="0">
+                                    </form>
+                                </td>
+                                <td>
+                                    <form method="post" action="" id="paro" name="para">
+                                        <input type="submit" value="paro" id="boton">
+                                        <input type="hidden" name='"marcha"' value="1">
+                                        <input type="hidden" name='"paro"' value="0">
+                                    </form>
+                                </td>
+                                <td>
+                                    <form method="post" action="" id="emergencia" name="reinicia">
+                                        <input type="submit" value="emergencia" id="boton">
+                                        <input type="hidden" name='"emergencia"' value="1"> 
+                                    </form>
+                                </td>
+                            </tr>
+                        </table>
+                </div>      
+            </article> 
+            <hr>
+            <div class="contenedor-principal">
                     <div class="via">
                     <div class="tranvia-movil">
                         <div class="linea-arriba"></div>
@@ -197,12 +226,9 @@
                         <div class="via"></div>
                     </div><!--fin del tranvia movil-->
                 </div>
-                </div> <!--fin del contenedor principal-->
+            </div> <!--fin del contenedor principal-->
 
-
-
-
-                <div id="linea">
+            <div class="linea">
                     <div id="paradas">
                         <div class="card">
                             <form method="post" action="" id="home" name="home">
@@ -212,17 +238,25 @@
                         </div>
                         <div class="card">
                             <td>
-                                <form method="post" action="" id="fc1" name="fc1">
-                                    <input type="submit" value="fc1" id="boton">
-                                    <input type="hidden" name='"fc1"' value="1"> 
+                                <form method="post" action="" id="p1" name="p1">
+                                    <input type="submit" value="p1" id="boton">
+                                    <input type="hidden" name='"p1"' value="1"> 
                                 </form>
                             </td>
                         </div>
                         <div class="card">
                             <td>
-                                <form method="post" action="" id="fc2" name="fc2">
-                                    <input type="submit" value="fc2" id="boton">
-                                    <input type="hidden" name='"fc2"' value="1"> 
+                                <form method="post" action="" id="p2" name="p2">
+                                    <input type="submit" value="p2" id="boton">
+                                    <input type="hidden" name='"p2"' value="1"> 
+                                </form>
+                            </td>
+                        </div>
+                        <div class="card">
+                            <td>
+                                <form method="post" action="" id="p3" name="p3">
+                                    <input type="submit" value="p3" id="boton">
+                                    <input type="hidden" name='"p3"' value="1"> 
                                 </form>
                             </td>
                         </div>
@@ -231,159 +265,74 @@
 
 
 
-                </div>
-                <hr>
-                <div id="estados">
-                    <table>
-                        <tr>
-                            <td>
-                                <form method="post" action="" id="marcha" name="arranca">
-                                    <input type="submit" value="marcha" id="boton">
-                                    <input type="hidden" name='"marcha"' value="1">
-                                    <input type="hidden" name='"paro"' value="0">
-                                </form>
-                            </td>
-                            <td>
-                                <form method="post" action="" id="paro" name="para">
-                                    <input type="submit" value="paro" id="boton">
-                                    <input type="hidden" name='"marcha"' value="1">
-                                    <input type="hidden" name='"paro"' value="0">
-                                </form>
-                            </td>
-                            <td>
-                                <form method="post" action="" id="emergencia" name="reinicia">
-                                    <input type="submit" value="emergencia" id="boton">
-                                    <input type="hidden" name='"emergencia"' value="1"> 
-                                </form>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </section>
-            <br> <br>
-            <section>
-                       
-            </section>
-        </main>
-    
-        <footer class="pie">
-            <div class="parte_empresa">
-                <div id="logo_empresa">
-                    <img src="../MEDIA/LOGOS/logo_provisional.png" alt="logo de la empresa">
-                    <p>Tranvía de Vitoria-Gasteiz</p>
-                </div>
-                <div class="redes">
-                    <span>
-                        <i id="fb" class="fa-brands fa-facebook"> </i>
-                        <i id="tw" class="fa-brands fa-twitter"> </i>
-                        <i id="in" class="fa-brands fa-instagram"> </i>
-                        <i id="lin" class="fa-brands fa-linkedin"></i>
-                    </span>
-                 </div>
             </div>
             <hr>
-            <div class="seccion">
-                <div>
-                    <h2>COMPAÑÍA</h2>
-                    <a href="#">HOME</a>
-                    <a href="#">CONTACTO</a>
-                    <a href="#">BLOG</a>
-                </div>
-                <div>
-                    <h2>SERVICIOS</h2>
-                    <a href="#">INFORMACIÓN TURÍSTICA</a>
-                    <a href="#">MUSEO VASCO DEL FERROCARRIL</a>
-                    <a href="#">EUSKOTREN KARGO</a>
-                </div>
-                <div>
-                    <h2>ATENCIÓN AL CLIENTE</h2>
-                    <a href="#">OFICINA DE ATENCIÓN A CLIENTES</a>
-                    <a href="#">+34 95 675 23 11</a>
-                </div>
-                <iframe src="https://www.google.com/maps/d/embed?mid=1cy9PL1uqSIbdgxHsNXo-rZbthcA&hl=es&ehbc=2E312F"></iframe>
-              </div>
-             
-             <hr>
-             <div class="derechos">
-                <ul>
-                    <li>
-                        <a href="#">Política de privacidad |</a>
-                    </li>
-                    <li>
-                        <a href="#">Información legal |</a>
-                    </li>
-                    <li>
-                        <a href="#">Cookies |</a>
-                    </li>
-                    <li>
-                        <a href="#">Política de privacidad |</a>
-                    </li>
-                    <li>
-                        <a href="#">Transparencia |</a>
-                    </li>
-                </ul>
-            </div>
-        </footer>
-        
-    </body>
+            
+        </section>
+        <br> <br>
+        <section>
+                   
+        </section>
+    </main>
 
+    <footer class="pie">
+        <div class="parte_empresa">
+            <div id="logo_empresa">
+                <img src="../MEDIA/LOGOS/logo_provisional.png" alt="logo de la empresa">
+                <p>Tranv&iacute;a de Vitoria-Gasteiz</p>
+            </div>
+            <div class="redes">
+                <span>
+                    <i  id="fb" class="fa-brands fa-facebook"> </i>
+                    <i  id="tw" class="fa-brands fa-twitter"> </i>
+                    <i  id="in" class="fa-brands fa-instagram"> </i>
+                    <i  id="lin" class="fa-brands fa-linkedin"></i>
+                </span>
+             </div>
+        </div>
+        <hr>
+        <div class="seccion">
+            <div>
+                <h2>COMPAÑ&Iacute;A</h2>
+                <a href="#">HOME</a>
+                <a href="#">CONTACTO</a>
+                <a href="#">BLOG</a>
+            </div>
+            <div>
+                <h2>SERVICIOS</h2>
+                <a href="#">INFORMACI&Oacute;N TUR&Iacute;STICA</a>
+                <a href="#">MUSEO VASCO DEL FERROCARRIL</a>
+                <a href="#">EUSKOTREN KARGO</a>
+            </div>
+            <div>
+                <h2>ATENCI&Oacute;N AL CLIENTE</h2>
+                <a href="#">OFICINA DE ATENCI&Oacute;N A CLIENTES</a>
+                <a href="#">+34 95 675 23 11</a>
+            </div>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1cy9PL1uqSIbdgxHsNXo-rZbthcA&hl=es&ehbc=2E312F"></iframe>
+          </div>
+         
+         <hr>
+         <div class="derechos">
+            <ul>
+                <li>
+                    <a href="#">Pol&iacute;tica de privacidad |</a>
+                </li>
+                <li>
+                    <a href="#">Informaci&oacute;n legal |</a>
+                </li>
+                <li>
+                    <a href="#">Cookies |</a>
+                </li>
+                <li>
+                    <a href="#">Pol&iacute;tica de privacidad |</a>
+                </li>
+                <li>
+                    <a href="#">Transparencia |</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 </body>
-<footer class="pie">
-    <div class="parte_empresa">
-        <div id="logo_empresa">
-            <img src="../MEDIA/LOGOS/logo_provisional.png" alt="logo de la empresa">
-            <p>Tranv&iacute;a de Vitoria-Gasteiz</p>
-        </div>
-        <div class="redes">
-            <span>
-                <i  id="fb" class="fa-brands fa-facebook"> </i>
-                <i  id="tw" class="fa-brands fa-twitter"> </i>
-                <i  id="in" class="fa-brands fa-instagram"> </i>
-                <i  id="lin" class="fa-brands fa-linkedin"></i>
-            </span>
-         </div>
-    </div>
-    <hr>
-    <div class="seccion">
-        <div>
-            <h2>COMPAÑ&Iacute;A</h2>
-            <a href="#">HOME</a>
-            <a href="#">CONTACTO</a>
-            <a href="#">BLOG</a>
-        </div>
-        <div>
-            <h2>SERVICIOS</h2>
-            <a href="#">INFORMACI&Oacute;N TUR&Iacute;STICA</a>
-            <a href="#">MUSEO VASCO DEL FERROCARRIL</a>
-            <a href="#">EUSKOTREN KARGO</a>
-        </div>
-        <div>
-            <h2>ATENCI&Oacute;N AL CLIENTE</h2>
-            <a href="#">OFICINA DE ATENCI&Oacute;N A CLIENTES</a>
-            <a href="#">+34 95 675 23 11</a>
-        </div>
-        <iframe src="https://www.google.com/maps/d/embed?mid=1cy9PL1uqSIbdgxHsNXo-rZbthcA&hl=es&ehbc=2E312F"></iframe>
-      </div>
-     
-     <hr>
-     <div class="derechos">
-        <ul>
-            <li>
-                <a href="#">Pol&iacute;tica de privacidad |</a>
-            </li>
-            <li>
-                <a href="#">Informaci&oacute;n legal |</a>
-            </li>
-            <li>
-                <a href="#">Cookies |</a>
-            </li>
-            <li>
-                <a href="#">Pol&iacute;tica de privacidad |</a>
-            </li>
-            <li>
-                <a href="#">Transparencia |</a>
-            </li>
-        </ul>
-    </div>
-</footer>
+
 </html>

@@ -217,20 +217,15 @@ select:focus {
     margin: 5px;
 }
 
-.verde {
-    background: green;
-}
-.rojo {
-    background: red;
-}
-.amarillo {
-    background: yellow;
-}
-
 table {
     border-spacing: 10px;
-  }
+}
 
+.variables {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
 /*****************************************************************************************/
 /* Boton automatico/manual */

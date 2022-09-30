@@ -1,16 +1,18 @@
 'use strict'
 
 // Eventos
-document.getElementById("bValidar").addEventListener("click", automatico);
-document.getElementById("m_manual").addEventListener("click", manual);
-
-function automatico() {
-    alert('automatico');
-}
-
-function manual() {
-    try {
-        alert("manual")
+document.getElementById("boton-label").addEventListener('change', function() {
+    if (this.checked) {
+        console.log("Checkbox is checked..");
+        document.getElementById("manual").style.visibility = "hidden";
+        document.getElementById("automatico").style.visibility = "visible";
+    } else {
+        console.log("Checkbox is not checked..");
+        document.getElementById("manual").style.visibility = "visible";  
+        document.getElementById("automatico").style.visibility = "hidden";
     }
-    catch (e) {}
-}
+});
+
+//Inicializar texto botones
+document.getElementById("manual").style.visibility = "hidden";
+document.getElementById("automatico").style.visibility = "visible";
