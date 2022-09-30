@@ -89,9 +89,7 @@ nav li:hover > ul {
     text-align: center;
 }
 
-section{
-    height: calc(100vh - 80px);
-}
+
 
 /*Para la tablet*/
 @media (max-width: 952px){
