@@ -8,20 +8,26 @@
 
 .contenedor-principal{
     max-width: 100%;
-    height: 600px;
+    height: 300px;
     border: 8px solid white;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
     overflow: hidden;
     position: relative;
+    
     /*transform: rotate(-90deg);*/
+  
 }
 
+
+
 .via{
-    transform: scale(0.7);
+    transform: scale(0.355);
     position: relative;
     transform: 0.2s;
+    cursor: pointer;
+    left: 1%;
 }
 
 .via > .tranvia-movil{
@@ -29,17 +35,21 @@
     bottom: 0;
     z-index: 1;
     left: 33.5%;
+
 }
 
 .tranvia-movil{
     position: scale(0.8);
     position: relative;
+
 }
+
+
 
 .tranvia-movil > .linea-arriba{
     height: 4px;
     background-color: #494c51;
-    width: 400%;
+    width: 1200%;
     position: absolute;
     top: -67px;
     transform: translateX(-50%);
@@ -79,6 +89,7 @@
 .tranvia-movil > .cuerpo-tranvia{
     display: flex;
     position: relative;
+    
 }
 
 .tranvia-movil > .cuerpo-tranvia::before{
