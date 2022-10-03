@@ -35,7 +35,7 @@
 .tranvia-movil > .linea-arriba{
     height: 4px;
     background-color: #494c51;
-    width: 1200%;
+    width: 12000%;
     position: absolute;
     top: -67px;
     transform: translateX(-50%);
@@ -300,4 +300,72 @@
 	 100% {
 		 background-position: 1200% 0;
 	}
+}
+
+
+/********************  ANIMACIÓN TRANVIA P1-Home *********************/
+/* 
+1 % --> Inicio
+22% --> Primera parada
+47% --> Segunda parada
+73% --> Tercera parada
+*/
+@keyframes p1-home {
+    from {left: 22%;}
+    to {left: 1%;}
+}
+
+@keyframes p2-home {
+    from {left: 47%;}
+    to {left: 1%;}
+}
+
+@keyframes p3-home {
+    from {left: 73%;}
+    to {left: 1%;}
+}
+
+@keyframes home-p1 {
+    from {left: 1%;}
+    to {left: 22%;}
+}
+
+@keyframes home-p2 {
+    from {left: 1%;}
+    to {left: 47%;}
+}
+
+@keyframes home-p3 {
+    from {left: 1%;}
+    to {left: 73%;}
+}
+
+@keyframes p2-p1 {
+    from {left: 47%;}
+    to {left: 22%;}
+}
+
+@keyframes p3-p1 {
+    from {left: 73%;}
+    to {left: 22%;}
+}
+
+@keyframes p1-p2 {
+    from {left: 22%;}
+    to {left: 47%;}
+}
+
+@keyframes p3-p2 {
+    from {left: 73%;}
+    to {left: 47%;}
+}
+
+@keyframes p1-p3 {
+    from {left: 22%;}
+    to {left: 73%;}
+}
+
+@keyframes p2-p3 {
+    from {left: 47%;}
+    to {left: 73%;}
 }
