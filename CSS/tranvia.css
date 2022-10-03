@@ -3,9 +3,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-
-
 .contenedor-principal{
     max-width: 100%;
     height: 300px;
@@ -14,22 +11,15 @@
     align-items: left;
     justify-content: left;
     overflow: hidden;
-    position: relative;
-    
+    position: relative; 
     /*transform: rotate(-90deg);*/
-  
 }
-
-
-
 .via{
     transform: scale(0.355);
     position: relative;
     transform: 0.2s;
-    cursor: pointer;
     left: 1%;
 }
-
 .via > .tranvia-movil{
     position: absolute;
     bottom: 0;
@@ -37,15 +27,11 @@
     left: 33.5%;
 
 }
-
 .tranvia-movil{
     position: scale(0.8);
     position: relative;
 
 }
-
-
-
 .tranvia-movil > .linea-arriba{
     height: 4px;
     background-color: #494c51;
@@ -54,14 +40,12 @@
     top: -67px;
     transform: translateX(-50%);
 }
-
 .tranvia-movil >.cable-conexion{
     position: absolute;
     top: -116px;
     right: 280px;
     transform: translateY(38px);
 }
-
 .tranvia-movil >.cable-conexion >.line{
     background-color: #494c51;
     height: 58px;
@@ -69,7 +53,6 @@
     transform: rotate(50deg);
     position: relative;
 }
-
 .tranvia-movil >.cable-conexion >.line:first-child::before{
     content: '';
     height: 4px;
@@ -81,17 +64,13 @@
     right: -2.5px;
     transform: rotate(-8deg);
 }
-
 .tranvia-movil >.cable-conexion >.line:last-child{
     transform: rotate(-50deg) translate(18px,-14px);
 }
-
 .tranvia-movil > .cuerpo-tranvia{
     display: flex;
-    position: relative;
-    
+    position: relative; 
 }
-
 .tranvia-movil > .cuerpo-tranvia::before{
     position: absolute;
     content: '';
@@ -104,22 +83,18 @@
     border-right: 20px solid transparent;
     z-index: -1;
 }
-
 .tranvia-movil >.cuerpo-tranvia> .vagones{
     display: flex;
 }
-
 .cabeza-tranvia{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
 }
-
 .cabeza-tranvia.-reverso{
     transform: scaleX(-1);
 }
-
 .cabeza-tranvia > .top{
     height: 0;
     width: 44px;
@@ -128,7 +103,6 @@
     flex: 0 20px;
     position: relative;
 }
-
 .cabeza-tranvia > .top::after{
     content: '';
     display: block;
@@ -139,7 +113,6 @@
     height: 4px;
     background-color: #494c51;
 }
-
 .cabeza-tranvia >.morro{
     height: 0;
     width: 44px;
@@ -147,24 +120,20 @@
     border-left: 4px solid transparent;
     flex: 0 32px;
 }
-
 .cabeza-tranvia > .papada{
     flex: 0 20px;
     width: 40px;
     border-top:20px solid #606874;
     border-left: 38px solid transparent;
 }
-
 .ventanal{
     display: flex;
     align-items: stretch;
 }
-
 .ventanal >.panel{
     background-color: #fafafa;
     width: 4px;
 }
-
 .cristal-ventanal{
     width: 32px;
     border-bottom: 3px solid #494c51;
@@ -189,15 +158,13 @@
     right: -12px;
     z-index: -1;
 }
-
- .partes-vagon {
+.partes-vagon {
     background-color: #fafafa;
     width: 260px;
     height: 140px;
     display: flex;
     flex-direction: column;
 }
-
 .partes-vagon > .techo {
     background-color: #494c51;
     height: 4px;
@@ -205,7 +172,6 @@
     margin-top: 8px;
     flex: 0 4px;
 }
-
 .cuerpo-tranvia{
     flex: 1;
     display: flex;
@@ -217,7 +183,6 @@
     border-bottom: 4px solid #606874;
     flex: 0;
 }
-
 .panel{
 	 flex: 1;
 	 display: flex;
@@ -263,7 +228,6 @@
 .fila-ventanas > .ventana:last-child {
     margin-right: 0;
 }
-
 .parte-baja{
     flex: 0 20px;
     background-color: #606874;
@@ -317,7 +281,6 @@
     border-left: 1px solid #494c51;
     border-bottom: 1px solid #494c51;
 }
-
 .entrepuertas {
     flex: 1;
     display: flex;
@@ -329,9 +292,7 @@
     border-bottom: 4px solid #606874;
     flex: 0;
 }
-
 /*******************************************************/
-
  @keyframes reflections {
 	 0% {
 		 background-position: 0 0;
