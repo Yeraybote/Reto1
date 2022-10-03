@@ -14,6 +14,14 @@
     position: relative; 
     /*transform: rotate(-90deg);*/
 }
+
+/*Linea marcador de  paradas*/
+
+
+
+
+
+
 .via{
     transform: scale(0.355);
     position: relative;
@@ -292,28 +300,6 @@
     border-bottom: 4px solid #606874;
     flex: 0;
 }
-
-.linea-circulos{
-        display: flex;
-        height: 10px;
-        background-color: #00b12c;
-        width: 1200%;
-        position: absolute;
-        bottom: 50px;
-        
-        
-}
-.time-line{
-    height: 10px;
-    background-color: #494c51;
-    width: 1200%;
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    bottom: 70px;
-}
-
 
 
 
