@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="../CSS/footer.css"  type="text/css">
     <link rel="stylesheet" href="../CSS/tranvia.css" type="text/css">
     <link rel="stylesheet" href="../CSS/lalinea.css">
+    <link rel="stylesheet" href="../CSS/timeline.css" type="text/css">
     <script src="../JS/tranvia.js"></script>
     <script src="https://kit.fontawesome.com/492d3aa907.js" crossorigin="anonymous"></script>
 </head>
@@ -95,7 +96,8 @@
                         </tr>
                     </table>
                 </div>      
-            </article> 
+            </article>
+
             <div class="contenedor-principal">
                 <div class="via" id="train">                    
                 <div class="tranvia-movil">
@@ -206,7 +208,7 @@
                     <div class="via"></div>
                 </div><!--fin del tranvia movil-->
              </div>
-
+<!--
              <div class="container">
                 <ul class="timeline">
                     <li class="active-tl">ORIGEN</li>
@@ -215,11 +217,10 @@
                     <li>DESTINO</li>
                 </ul>
               </div>
-             
+-->             
         
       
             </div> <!--fin del contenedor principal-->
-
 
             <div id="linea">
                 <div id="paradas">
@@ -260,7 +261,28 @@
         </section>
         <br> <br>
         <section>
-                   
+            <div class="flex-parent">
+                <div class="input-flex-container">
+                    <div class="input active" onclick="moverhome()">
+                        <span data-year="1" data-info="Origen"></span>
+                    </div>
+                    <div class="input" onclick="moverp1()">
+                        <span data-year="2" data-info="Parada_1"></span>
+                    </div>
+                    <div class="input" onclick="moverp2()">
+                        <span data-year="3" data-info="Parada_2"></span>
+                    </div>
+                    <div class="input" onclick="moverp3()">
+                        <span data-year="4" data-info="Destino"></span>
+                    </div>		
+                </div>
+                <div class="description-flex-container">
+                    <p class="active">Cocheras de trenes</p>
+                    <p>Estacion a 8km de la cochera</p>
+                    <p>Estacion a 25km de la cochera. 17km de Parada_2</p>
+                    <p>Estacion a 42km de la cochera. 17km de Destino</p> 
+                </div>
+            </div>      
         </section>
     </main>
 
@@ -325,6 +347,7 @@
 
     
     <script src="../JS/enviar.js"></script>
+    <script src="../JS/timeline.js"></script>
 </body>
 
 </html>
