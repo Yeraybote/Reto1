@@ -1,16 +1,25 @@
 'use strict'
 
 // Eventos
-document.getElementById("bValidar").addEventListener("click", automatico);
-document.getElementById("m_manual").addEventListener("click", manual);
+var boton_label = document.getElementById("boton-label");
 
-function automatico() {
-    alert('automatico');
+if(boton_label) {
+    boton_label.addEventListener('change', function() {
+        if (this.checked) {
+            console.log("Checkbox is checked..");
+            document.getElementById("manual").style.visibility = "hidden";
+            document.getElementById("automatico").style.visibility = "visible";
+            document.getElementById("estados").style.visibility = "visible";
+        } else {
+            console.log("Checkbox is not checked..");
+            document.getElementById("manual").style.visibility = "visible";  
+            document.getElementById("automatico").style.visibility = "hidden";
+            document.getElementById("estados").style.visibility = "hidden";
+        }
+    });
 }
 
-function manual() {
-    try {
-        alert("manual")
-    }
-    catch (e) {}
-}
+//Inicializar texto botones
+document.getElementById("manual").style.visibility = "hidden";
+document.getElementById("automatico").style.visibility = "visible";
+document.getElementById("estados").style.visibility = "visible";
