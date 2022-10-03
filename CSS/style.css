@@ -25,7 +25,6 @@ main {
     color: #7B808C;
 }
 /*********************************************************************************************/
-
 nav{
     background-color: #2ecc71;
     height: 80px;
@@ -36,7 +35,6 @@ nav{
     position: absolute;
     padding: 20px 50px;
 }
-
 .logo_h{
     width: 30px; /*hemos centrado el logo : arriba y abajo 20+20+40px=80px*/
 }
@@ -50,7 +48,6 @@ nav ul li{
     margin: 0 5px;
     color: white;
 }
-
 nav ul li a{
     color: white;
     font-size: 1.125em;
@@ -74,23 +71,17 @@ li a:hover{
 #check{
     display: none;
 }
-
 nav li ul {
     display:none;
     position:absolute;
 }
-
 nav li:hover > ul {
     display:block;
     background-color: #2ecc71;
 }
-
 .submenu {
     text-align: center;
 }
-
-
-
 /*Para la tablet*/
 @media (max-width: 952px){
     .enlace{
@@ -101,18 +92,16 @@ nav li:hover > ul {
         font-size: 1em;
     }
 }
-
 /*Para dispositivos móviles*/
 @media (max-width: 858px){
     .check-btn{
         display: block;
     }
-    ul{
+    nav ul{
         text-align: center;
         transition: 0.5s;
         position: absolute;
         width: 100%;
-        height: 100%;
         background: #7B808C;
         top: 80px;
         left: -100%; /*para corregirlo*/
@@ -125,24 +114,24 @@ nav li:hover > ul {
     nav ul li a{
         font-size: 1.25em ;
     }
-    li a:hover,
-    li a.activo{
+    nav li a:hover,
+    nav li a.activo{
         background: none;
         color: rgb(9, 9, 9);
     }
-
     #check:checked ~ ul{ /*solo cuando esté seleccionado , buscará a ul*/
         left: 0; /*así se va a mostrar*/
+        z-index: 1; /* delante de todo el resto*/
     }
-
     .submenu {
         left: 0;
         top: auto;
         display: block;
-    }
-
-    .submenu ul li a {
         background-color: #7B808C;
+    }
+    nav li:hover > ul {
+       background-color: #7B808C;
+       color: white;
     }
 }
 /*********************************************************************************************/
@@ -191,13 +180,11 @@ select:focus {
     overflow: hidden;
 }
 /*********************************************************************************************/
-
 #paradas {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     grid-gap: 10px;
-  }
-    
+}  
 .card {
     min-height: 200px;
     overflow: hidden;
@@ -209,25 +196,14 @@ select:focus {
     align-content: center;
     justify-content: center;
 }
-
-
-.circulo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin: 5px;
-}
-
 table {
     border-spacing: 10px;
 }
-
 .variables {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
 /*****************************************************************************************/
 /* Boton automatico/manual */
 :root {
@@ -236,24 +212,22 @@ table {
     --color-button: #fdffff;
     --color-black: white;
 }
-.boton {
+.boton-selector {
     display: inline-block;
 }
-.boton .boton__checkbox {
+.boton-selector .boton__checkbox {
     display: none;
 }
-.boton .boton__label {
+.boton-selector .boton__label {
     background-color: var(--color-red);
     width: 5rem;
     height: 3rem;
     border-radius: 3rem;
     display: inline-block;
-    position: relative;
 }
-.boton .boton__label:before {
+.boton-selector .boton__label:before {
     transition: .2s;
     display: block;
-    position: absolute;
     width: 3rem;
     height: 3rem;
     background-color: var(--color-button);
@@ -262,9 +236,9 @@ table {
     box-shadow: inset 0px 0px 0px 1px var(--color-black);
     cursor:pointer;
 }
-.boton .boton__checkbox:checked + .boton__label {
+.boton-selector .boton__checkbox:checked + .boton__label {
     background-color: var(--color-green);
 }
-.boton .boton__checkbox:checked + .boton__label:before {
+.boton-selector .boton__checkbox:checked + .boton__label:before {
     transform: translateX(2rem);
 }
