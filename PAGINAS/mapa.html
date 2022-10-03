@@ -56,32 +56,46 @@
         </header>
     
         <main>
-                <div class="boton">
-                    <!-- Checkbox -->
-                    <input type="checkbox" name="boton" id="boton-label" class="boton__checkbox">
-                    <!-- Botón -->
-                    <label for="boton-label" class="boton__label"></label>
-                </div>
+            <article class="variables">
                 <div id="modoUso">
+                    <div class="boton">
+                        <form method="post" action="" id="boton_uso" name="f_automatico">
+                            <label for="automatico" id="automatico">AUTOMATICO</label>
+                            <!-- Checkbox -->
+                            <input type="checkbox" name="boton" id="boton-label" class="boton__checkbox" checked>
+                            <!-- Botón -->
+                            <label for="boton-label" class="boton__label"></label>
+                            <label for="manual" id="manual">MANUAL</label>
+                        </form>
+                    </div>
+                </div>
+                <div id="estados">
                     <table>
                         <tr>
                             <td>
-                                <form method="post" action="" id="f_automatico" name="f_automatico">
-                                    <input type="submit" value="automatico" class="boton" id="m_automatico">
-                                    <input type="hidden" name='"automatico"' value="1">
-                                    <input type="hidden" name='"manual"' value="0">
+                                <form method="post" action="" id="marcha" name="arranca">
+                                    <input type="submit" value="marcha" id="boton">
+                                    <input type="hidden" name='"marcha"' value="1">
+                                    <input type="hidden" name='"paro"' value="0">
                                 </form>
                             </td>
                             <td>
-                                <form method="post" action="" id="f_manual" name="f_manual">
-                                    <input type="submit" value="manual" class="boton" id="m_manual">
-                                    <input type="hidden" name='"automatico"' value="1">
-                                    <input type="hidden" name='"manual"' value="0">
+                                <form method="post" action="" id="paro" name="para">
+                                    <input type="submit" value="paro" id="boton">
+                                    <input type="hidden" name='"marcha"' value="1">
+                                    <input type="hidden" name='"paro"' value="0">
+                                </form>
+                            </td>
+                            <td>
+                                <form method="post" action="" id="emergencia" name="reinicia">
+                                    <input type="submit" value="emergencia" id="boton">
+                                    <input type="hidden" name='"emergencia"' value="1"> 
                                 </form>
                             </td>
                         </tr>
                     </table>
-                </div>
+                </div>      
+            </article> 
                 <div class="contenedor-principal">
                     <div class="via" id="train">
                     <div class="tranvia-movil">
@@ -231,186 +245,8 @@
                         </div>
                     </div>
                 </div>
-                <div id="estados">
-                    <table>
-                        <tr>
-                            <td>
-                                <form method="post" action="" id="marcha" name="arranca">
-                                    <input type="submit" value="marcha" id="boton">
-                                    <input type="hidden" name='"marcha"' value="1">
-                                    <input type="hidden" name='"paro"' value="0">
-                                </form>
-                            </td>
-                            <td>
-                                <form method="post" action="" id="paro" name="para">
-                                    <input type="submit" value="paro" id="boton">
-                                    <input type="hidden" name='"marcha"' value="1">
-                                    <input type="hidden" name='"paro"' value="0">
-                                </form>
-                            </td>
-                            <td>
-                                <form method="post" action="" id="emergencia" name="reinicia">
-                                    <input type="submit" value="emergencia" id="boton">
-                                    <input type="hidden" name='"emergencia"' value="1"> 
-                                </form>
-                            </td>
-                        </tr>
-                    </table>
-                </div>      
+                     
             </article> 
-            <div class="contenedor-principal">
-                <div class="via" id="train">                    
-                <div class="tranvia-movil">
-                    <div class="linea-arriba"></div>
-                    <div class="cable-conexion">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                    </div><!--fin del cable-conexion-->
-                    <div class="cuerpo-tranvia">
-                        <div class="cabeza-tranvia">
-                            <div class="top"></div>
-                            <div class="ventanal">
-                                <div class="cristal-ventanal">
-                                    <div class="cristal"></div>
-                                </div>
-                                <div class="panel"></div>
-                            </div><!--fin de ventanal-->
-                            <div class="morro"></div>
-                            <div class="papada"></div>
-                        </div>
-                        <div class="vagones">
-                         <div class="partes-vagon">
-                            <div class="techo"></div> 
-                            <div class="entrepuertas">
-                                <div class="puerta">
-                                    <div class="panel-puerta">
-                                        <div class="cristal"></div>
-                                    </div>
-                                    <div class="panel-puerta">
-                                        <div class="cristal"></div>
-                                    </div>
-                                </div>
-                                <div class="panel">
-                                    <div class="fila-ventanas">
-                                        <div class="ventana">
-                                            <div class="ventana-arriba"></div> 
-                                            <div class="ventana-abajo"></div>
-                                        </div>
-                                        <div class="ventana">
-                                            <div class="ventana-arriba"></div> 
-                                            <div class="ventana-abajo"></div>
-                                        </div>      
-                                    </div>
-                                    <div class="parte-baja"></div>
-                                </div> 
-                                <div class="puerta">
-                                    <div class="panel-puerta">
-                                        <div class="cristal"></div>
-                                    </div>
-                                    <div class="panel-puerta">
-                                        <div class="cristal"></div>
-                                    </div>
-                                </div>
-                            </div> 
-                          
-                         </div>
-                        </div><!--fin de vagones-->
-                        <div class="vagones">
-                            <div class="partes-vagon">
-                               <div class="techo"></div> 
-                               <div class="entrepuertas">
-                                   <div class="puerta">
-                                       <div class="panel-puerta">
-                                           <div class="cristal"></div>
-                                       </div>
-                                       <div class="panel-puerta">
-                                           <div class="cristal"></div>
-                                       </div>
-                                   </div>
-                                   <div class="panel">
-                                       <div class="fila-ventanas">
-                                           <div class="ventana">
-                                               <div class="ventana-arriba"></div> 
-                                               <div class="ventana-abajo"></div>
-                                           </div>
-                                           <div class="ventana">
-                                               <div class="ventana-arriba"></div> 
-                                               <div class="ventana-abajo"></div>
-                                           </div>      
-                                       </div>
-                                       <div class="parte-baja"></div>
-                                   </div> 
-                                   <div class="puerta">
-                                       <div class="panel-puerta">
-                                           <div class="cristal"></div>
-                                       </div>
-                                       <div class="panel-puerta">
-                                           <div class="cristal"></div>
-                                       </div>
-                                   </div>
-                               </div> 
-                             
-                            </div>
-                           </div><!--fin de vagones-->
-                        
-                        <div class="cabeza-tranvia -reverso">
-                            <div class="top"></div>
-                            <div class="ventanal">
-                                <div class="cristal-ventanal">
-                                    <div class="cristal"></div>
-                                </div>
-                                <div class="panel"></div>
-                            </div><!--fin de ventanal-->
-                            <div class="morro"></div>
-                            <div class="papada"></div>
-                        </div>
-                    </div><!--fin del cuerpo tranvia-->
-                    <div class="via"></div>
-                </div><!--fin del tranvia movil-->
-            </div>
-            </div> <!--fin del contenedor principal-->
-
-
-            <div id="linea">
-                <div id="paradas">
-                    <div class="card">
-                        <form method="post" action="" id="home" name="home" onclick="moverhome()">
-                            <input type="button" value="home" id="boton">
-                            <input type="hidden" name='"home"' value="1"> 
-                        </form>
-                    </div>
-                    <div class="card">
-                        <td>
-                            <form method="post" action="" id="p1" name="p1" onclick="moverp1()">
-                                <input type="button" value="p1" id="boton">
-                                <input type="hidden" name='"p1"' value="1"> 
-                            </form>
-                        </td>
-                    </div>
-                    <div class="card">
-                        <td>
-                            <form method="post" action="" id="p2" name="p2" onclick="moverp2()">
-                                <input type="button" value="p2" id="boton">
-                                <input type="hidden" name='"p2"' value="1"> 
-                            </form>
-                        </td>
-                    </div>
-                    <div class="card">
-                        <td>
-                            <form method="post" action="" id="p3" name="p3" onclick="moverp3()">
-                                <input type="button" value="p3" id="boton">
-                                <input type="hidden" name='"p3"' value="1"> 
-                            </form>
-                        </td>
-                    </div>
-                </div>
-
-            </div>
-            
-        </section>
-        <br> <br>
-        <section>
-                   
         </section>
     </main>
 
