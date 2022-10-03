@@ -69,7 +69,7 @@ iframe{
    justify-content: center;
    list-style: none;
 }
-@media (max-width: 800px) {
+@media (max-width: 858px) {
     .seccion{
         flex-wrap: wrap;
     } 
