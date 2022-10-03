@@ -63,30 +63,12 @@
                         <form method="post" action="" id="boton_uso" name="f_automatico">
                             <label for="automatico" id="automatico">AUTOMATICO</label>
                             <!-- Checkbox -->
-                            <input type="checkbox" name="boton" id="boton-label" class="boton__checkbox" chec>
+                            <input type="checkbox" name="boton" id="boton-label" class="boton__checkbox" checked>
                             <!-- Botón -->
                             <label for="boton-label" class="boton__label"></label>
                             <label for="manual" id="manual">MANUAL</label>
                         </form>
                     </div>
-                    <table style="visibility: hidden;">
-                                <tr>
-                                    <td>
-                                        <form method="post" action="" id="f_automatico" name="f_automatico">
-                                            <input type="submit" value="automatico" class="boton" id="m_automatico">
-                                            <input type="hidden" name='"automatico"' value="1">
-                                            <input type="hidden" name='"manual"' value="0">
-                                        </form>
-                                    </td>
-                                    <td>
-                                        <form method="post" action="" id="f_manual" name="f_manual">
-                                            <input type="submit" value="manual" class="boton" id="m_manual">
-                                            <input type="hidden" name='"automatico"' value="1">
-                                            <input type="hidden" name='"manual"' value="0">
-                                        </form>
-                                    </td>
-                                </tr>
-                    </table>
                 </div>
                 <div id="estados">
                     <table>
@@ -264,9 +246,6 @@
                     </div>
                 </div>
 
-
-
-
             </div>
             <hr>
             
@@ -335,6 +314,9 @@
             </ul>
         </div>
     </footer>
+
+    
+    <script src="../JS/enviar.js"></script>
 </body>
 
 </html>

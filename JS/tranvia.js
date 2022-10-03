@@ -55,3 +55,5 @@ let moverp2 = function() {
     }, 20);
     parada = 0;
   }  
+
+  
