@@ -14,6 +14,14 @@
     position: relative; 
     /*transform: rotate(-90deg);*/
 }
+
+/*Linea marcador de  paradas*/
+
+
+
+
+
+
 .via{
     transform: scale(0.355);
     position: relative;
@@ -292,6 +300,13 @@
     border-bottom: 4px solid #606874;
     flex: 0;
 }
+
+
+
+
+
+
+
 /*******************************************************/
  @keyframes reflections {
 	 0% {
