@@ -7,7 +7,7 @@ for (var i = 0; i < inputs.length; i++) {
 }
 
 
-function timeline(e){
+function timeline(){
 	var input = document.querySelector('.input');
 	//input.classList.contains('input');
 	if(this.classList.contains('active'))
