@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="../JS/desplegable.js"></script>
+    <script type="text/javascript" src="../JS/desplegable.js"></script>
     <link rel="stylesheet" href="../CSS/fonts.css">
     <link rel="stylesheet" href="../CSS/style.css" type="text/css">
     <link rel="stylesheet" href="../CSS/footer.css"  type="text/css">
@@ -69,13 +69,8 @@
                 <label for="origen"> Estacion origen </label> <br>
                 <select id="origen" name="origen" size="1" class="caja">
                     <option selected hidden>Selecione una estacion</option> 
-                    <optgroup label="Linea 1"> </optgroup>
-                        <option value="Parada_1"> &nbsp; Parada 1</option>
-                        <option value="Parada_2"> &nbsp; Parada 1</option>
-                        <option value="Parada_3"> &nbsp; Parada 3</option>
-                    <optgroup label="Linea 2"> </optgroup>
-                        <option value="Parada_4"> &nbsp; Parada 4</option>
-                        <option value="Parada_5"> &nbsp; Parada 5</option>
+                    <optgroup label="Linea 1" id="linea1"> </optgroup>
+                    <optgroup label="Linea 2" id="linea2"> </optgroup>
                 </select>
                 <br>
                 <label for="destino"> Estacion destino </label> <br>
@@ -116,10 +111,12 @@
             </form>
         </section>
 
+
         <article id="resultados-busqueda">
 
         </article>
 
+        <script type="text/javascript" src="../JS/desplegable.js"></script>
     </main>
 
     <footer class="pie">
