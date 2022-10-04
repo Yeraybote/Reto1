@@ -294,10 +294,16 @@
     flex: 0;
 }
 
-
-
-
-
+@media (min-width: 1250px) {
+    .via{
+        transform: scale(0.355);
+    }
+}
+@media (max-width: 850px) {
+    .via{
+        transform: scale(0.15);
+    }
+}
 
 
 /*******************************************************/
@@ -324,56 +330,56 @@
 }
 
 @keyframes p2-home {
-    from {left: 47%;}
+    from {left: 50%;}
     to {left: 1%;}
 }
 
 @keyframes p3-home {
-    from {left: 73%;}
+    from {left: 74%;}
     to {left: 1%;}
 }
 
 @keyframes home-p1 {
     from {left: 1%;}
-    to {left: 22%;}
+    to {left: 25%;}
 }
 
 @keyframes home-p2 {
     from {left: 1%;}
-    to {left: 47%;}
+    to {left: 50%;}
 }
 
 @keyframes home-p3 {
     from {left: 1%;}
-    to {left: 73%;}
+    to {left: 74%;}
 }
 
 @keyframes p2-p1 {
-    from {left: 47%;}
-    to {left: 22%;}
+    from {left: 50%;}
+    to {left: 25%;}
 }
 
 @keyframes p3-p1 {
-    from {left: 73%;}
-    to {left: 22%;}
+    from {left: 74%;}
+    to {left: 25%;}
 }
 
 @keyframes p1-p2 {
-    from {left: 22%;}
-    to {left: 47%;}
+    from {left: 25%;}
+    to {left: 50%;}
 }
 
 @keyframes p3-p2 {
-    from {left: 73%;}
-    to {left: 47%;}
+    from {left: 74%;}
+    to {left: 50%;}
 }
 
 @keyframes p1-p3 {
-    from {left: 22%;}
-    to {left: 73%;}
+    from {left: 25%;}
+    to {left: 74%;}
 }
 
 @keyframes p2-p3 {
-    from {left: 47%;}
-    to {left: 73%;}
+    from {left: 50%;}
+    to {left: 74%;}
 }
