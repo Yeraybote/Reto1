@@ -10,8 +10,6 @@ for (var i = 0; i < inputs.length; i++) {
 function timeline(){
 	var input = document.querySelector('.input');
 	//input.classList.contains('input');
-	if(this.classList.contains('active'))
-		alert("ya activo")
 	
 	input.classList.remove('active');
 	this.classList.add('active');
