@@ -73,23 +73,23 @@
                     <table>
                         <tr>
                             <td>
-                                <form method="post" action="" id="marcha" name="arranca">
-                                    <input type="submit" value="marcha" id="boton">
-                                    <input type="hidden" name='"marcha"' value="1">
-                                    <input type="hidden" name='"paro"' value="0">
+                                <form method="post" id="marcha" name="arranca">
+                                    <input type="button" value="marcha" id="boton" onclick="automatico()">
+                                    <input type="hidden" name='"marcha"' value="1" onclick="automatico()">
+                                    <input type="hidden" name='"paro"' value="0" onclick="automatico()">
                                 </form>
                             </td>
                             <td>
-                                <form method="post" action="" id="paro" name="para">
-                                    <input type="submit" value="paro" id="boton">
-                                    <input type="hidden" name='"marcha"' value="1">
-                                    <input type="hidden" name='"paro"' value="0">
+                                <form method="post" id="paro" name="para">
+                                    <input type="button" value="paro" id="boton" onclick="paro()">
+                                    <input type="hidden" name='"marcha"' value="1" onclick="paro()">
+                                    <input type="hidden" name='"paro"' value="0" onclick="paro()">
                                 </form>
                             </td>
                             <td>
                                 <form method="post" action="" id="emergencia" name="reinicia">
-                                    <input type="submit" value="emergencia" id="boton">
-                                    <input type="hidden" name='"emergencia"' value="1"> 
+                                    <input type="button" value="emergencia" id="boton" onclick="emer()">
+                                    <input type="hidden" name='"emergencia"' value="1" onclick="emer()"> 
                                 </form>
                             </td>
                         </tr>

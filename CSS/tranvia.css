@@ -11,7 +11,7 @@
     align-items: left;
     justify-content: left;
     overflow: hidden;
-    position: relative; 
+    position: relative;
     /*transform: rotate(-90deg);*/
 }
 
@@ -325,7 +325,7 @@
 73% --> Tercera parada
 */
 @keyframes p1-home {
-    from {left: 22%;}
+    from {left: 33%;}
     to {left: 1%;}
 }
 
@@ -341,7 +341,7 @@
 
 @keyframes home-p1 {
     from {left: 1%;}
-    to {left: 25%;}
+    to {left: 33%;}
 }
 
 @keyframes home-p2 {
@@ -356,16 +356,16 @@
 
 @keyframes p2-p1 {
     from {left: 50%;}
-    to {left: 25%;}
+    to {left: 33%;}
 }
 
 @keyframes p3-p1 {
     from {left: 74%;}
-    to {left: 25%;}
+    to {left: 33%;}
 }
 
 @keyframes p1-p2 {
-    from {left: 25%;}
+    from {left: 33%;}
     to {left: 50%;}
 }
 
@@ -375,7 +375,7 @@
 }
 
 @keyframes p1-p3 {
-    from {left: 25%;}
+    from {left: 33%;}
     to {left: 74%;}
 }
 
