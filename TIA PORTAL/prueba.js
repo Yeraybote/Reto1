@@ -50,6 +50,8 @@ async function receiveData () {
 	paroF();
 	console.log(marcha_js);
 	console.log(paro_js);
+	
+	console.log(receivedData);
   } 
 
  
