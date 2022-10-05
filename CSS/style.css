@@ -215,6 +215,10 @@ table {
 .boton-selector {
     display: inline-block;
 }
+.boton-selector h1, .boton-selector  input, .boton-selector label {
+    display: inline;
+    vertical-align: middle;
+}
 .boton-selector .boton__checkbox {
     display: none;
 }
