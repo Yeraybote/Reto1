@@ -1,3 +1,13 @@
+:root {
+    --color-verde: #2ecc71;
+    --color-verde-hover: #66d494;
+    --color-rojo: #fe5e41;
+    --color-fondo: #E9ECF2;
+    --color-gris: #7B808C;
+    --color-button: #fdffff;
+    --color-negro: black;
+    --color-blanco: white;
+}
 * { 
     padding: 0;
     margin: 0;
@@ -10,7 +20,7 @@ body {
     min-height: 100vh;
     max-width:100%; 
     margin: 0 auto;
-    background-color: #E9ECF2;
+    background-color: var(--color-fondo);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
@@ -22,11 +32,11 @@ body {
 main {
     padding: 10%; 
     grid-area: principal;
-    color: #7B808C;
+    color: var(--color-gris);
 }
 /*********************************************************************************************/
 nav{
-    background-color: #2ecc71;
+    background-color:  var(--color-verde);
     height: 80px;
     width: 100%;
     grid-area: menu;
@@ -46,22 +56,21 @@ nav ul li{
     display: inline-block;
     line-height: 80px;
     margin: 0 5px;
-    color: white;
+    color: var(--color-blanco);;
 }
 nav ul li a{
-    color: white;
+    color: var(--color-blanco);;
     font-size: 1.125em;
     padding: 7px 13px;
     border-radius: 3px;
 }
-li a.activo , 
-li a:hover{
-    background: #7B808C;
+li a.activo, li a:hover{
+    background: var(--color-gris);
     transition: 0.5s;
 }
 .check-btn{
     font-size:1.875em ;
-    color: black;
+    color: var(--color-negro);
     float: right;
     line-height: 80px;
     margin-right: 40px;
@@ -77,7 +86,7 @@ nav li ul {
 }
 nav li:hover > ul {
     display:block;
-    background-color: #2ecc71;
+    background-color: var(--color-verde);
 }
 .submenu {
     text-align: center;
@@ -102,7 +111,7 @@ nav li:hover > ul {
         transition: 0.5s;
         position: absolute;
         width: 100%;
-        background: #7B808C;
+        background: var(--color-gris);
         top: 80px;
         left: -100%; /*para corregirlo*/
     }
@@ -127,18 +136,18 @@ nav li:hover > ul {
         left: 0;
         top: auto;
         display: block;
-        background-color: #7B808C;
+        background-color: var(--color-gris);
     }
     nav li:hover > ul {
-       background-color: #7B808C;
-       color: white;
+       background-color: var(--color-gris);
+       color: var(--color-blanco);;
     }
 }
 /*********************************************************************************************/
 input[type=button], input[type=submit] {
-    background-color: #2ecc71;
+    background-color: var(--color-verde);
     border: none;
-    color: #E9ECF2;
+    color: var(--color-fondo);
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -148,11 +157,11 @@ input[type=button], input[type=submit] {
     cursor: pointer;
 }
 input[type=button]:hover, input[type=submit]:hover{
-    background-color: #66d494;
-    color: white;
+    background-color: var(--color-verde-hover);
+    color: var(--color-blanco);;
 }
 select {
-    background-color: #E9ECF2;
+    background-color: var(--color-fondo);
     border: none;
     font-size: 14px;
     height: 30px;
@@ -161,13 +170,6 @@ select {
 }
 select:focus { 
     outline: none;
-}
-.caja {
-    margin:5px auto 10px auto;	
-    border:1px solid #d9d9d9;
-    height:30px;
-    overflow: hidden;
-    width: 230px;
 }
 .input_f {
     background: transparent;
@@ -180,22 +182,6 @@ select:focus {
     overflow: hidden;
 }
 /*********************************************************************************************/
-#paradas {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-    grid-gap: 10px;
-}  
-.card {
-    min-height: 200px;
-    overflow: hidden;
-    vertical-align: top;
-    padding: 2em;
-    line-height: 1.5;
-    border-radius: 1rem;
-    color: ghostwhite;
-    align-content: center;
-    justify-content: center;
-}
 table {
     border-spacing: 10px;
 }
@@ -206,20 +192,18 @@ table {
 }
 /*****************************************************************************************/
 /* Boton automatico/manual */
-:root {
-    --color-green: #2ecc71;
-    --color-red: #fe5e41;
-    --color-button: #fdffff;
-    --color-black: white;
-}
 .boton-selector {
     display: inline-block;
+}
+.boton-selector h1, .boton-selector  input, .boton-selector label {
+    display: inline;
+    vertical-align: middle;
 }
 .boton-selector .boton__checkbox {
     display: none;
 }
 .boton-selector .boton__label {
-    background-color: var(--color-red);
+    background-color: var(--color-rojo);
     width: 5rem;
     height: 3rem;
     border-radius: 3rem;
@@ -233,11 +217,11 @@ table {
     background-color: var(--color-button);
     content: '';
     border-radius: 50%;
-    box-shadow: inset 0px 0px 0px 1px var(--color-black);
+    box-shadow: inset 0px 0px 0px 1px var(--color-negro);
     cursor:pointer;
 }
 .boton-selector .boton__checkbox:checked + .boton__label {
-    background-color: var(--color-green);
+    background-color: var(--color-verde);
 }
 .boton-selector .boton__checkbox:checked + .boton__label:before {
     transform: translateX(2rem);
