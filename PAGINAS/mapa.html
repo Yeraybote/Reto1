@@ -27,7 +27,6 @@
     <link rel="stylesheet" href="../CSS/footer.css"  type="text/css">
     <link rel="stylesheet" href="../CSS/tranvia.css" type="text/css">
     <link rel="stylesheet" href="../CSS/timeline.css" type="text/css">
-    <script src="../JS/tranvia.js"></script>
     <script src="https://kit.fontawesome.com/492d3aa907.js" crossorigin="anonymous"></script>
     <title>Mapa - Tranv&iacute;a</title>
 </head>
@@ -214,16 +213,16 @@
                  
                     <div class="flex-parent">
                         <div class="input-flex-container">
-                            <div class="input active" onclick="moverhome()">
+                            <div class="input active" id="estaciones" onclick="moverhome()">
                                 <span data-id="1" data-info="Origen"></span>
                             </div>
-                            <div class="input active" onclick="moverp1()">
+                            <div class="input active" id="estaciones1" onclick="moverp1()">
                                 <span data-id="2" data-info="Parada_1"></span>
                             </div>
-                            <div class="input active" onclick="moverp2()">
+                            <div class="input active" id="estaciones2" onclick="moverp2()">
                                 <span data-id="3" data-info="Parada_2"></span>
                             </div>
-                            <div class="input active" onclick="moverp3()">
+                            <div class="input active" id="estaciones3" onclick="moverp3()">
                                 <span data-id="4" data-info="Destino"></span>
                             </div>		
                         </div>
@@ -301,9 +300,7 @@
             </ul>
         </div>
     </footer>
-
-    
-    <script src="../JS/enviar.js"></script>
+    <script src="../JS/tranvia.js"></script>
     <script src="../JS/timeline.js"></script>
 </body>
 

@@ -1,3 +1,4 @@
+// Boton del ojo, mostraremos el campo de la contraseña
 function mostrarContrasena(){
     var tipo = document.getElementById("pass");
     if(tipo.type == "password"){
@@ -7,8 +8,9 @@ function mostrarContrasena(){
     }
 }
 
+// Función inicio sesión
 function inicioSesion(){
-    var usuarios = [{user: "admin", pass:"admin"},{user: "Yeray", pass:"ee"}];
+    var usuarios = [{user: "admin", pass:"admin"}];
     var user = document.getElementById("user").value;
     var pass = document.getElementById("pass").value;
 
