@@ -12,22 +12,22 @@
                     <table>
                         <tr>
                             <td>
-                                <form method="post" action="#" id="marcha" name="arranca">
-                                    <input type="submit" value="marcha" id="boton">
+                                <form method="post" action="#" id="marcha" name="marcha">
+                                    <input type="button" value="marcha">
                                     <input type="hidden" name='"WEB".marcha' value="1">
                                     <input type="hidden" name='"WEB".paro' value="0">
                                 </form>
                             </td>
                             <td>
-                                <form method="post" action="#" id="paro" name="para">
-                                    <input type="submit" value="paro" id="boton">
-                                    <input type="hidden" name='"WEB".marcha' value="1">
-                                    <input type="hidden" name='"WEB".paro' value="0">
+                                <form method="post" action="#" id="paro" name="paro">
+                                    <input type="button" value="paro">
+                                    <input type="hidden" name='"WEB".marcha' value="0">
+                                    <input type="hidden" name='"WEB".paro' value="1">
                                 </form>
                             </td>
                             <td>
-                                <form method="post" action="#" id="emergencia" name="reinicia">
-                                    <input type="submit" value="emergencia" id="boton">
+                                <form method="post" action="#" id="emergencia" name="emergencia">
+                                    <input type="button" value="emergencia">
                                     <input type="hidden" name='"WEB".emergencia' value="1"> 
                                 </form>
                             </td>
@@ -35,13 +35,13 @@
                     </table>
                 </div>   
 				
-				<div>
+				<div id="variables">
 						"marcha": = ":="WEB".marcha:"
 						"paro": = ":="WEB".paro:"
 				</div>
                 
                 
-                <script type="text/javascript" src="./prueba.js"></script>
+    <script type="text/javascript" src="./prueba.js"></script>
 
 
 </body>
