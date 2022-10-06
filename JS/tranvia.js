@@ -79,12 +79,26 @@ let moverhome = function() {
 
 let automatico = function () {
   quieto = false;
+  auto();
+  setInterval(autosinorigen, 24000)
+  
+}
+
+// Primer trayecto al darle automatico
+function auto (){
   setTimeout(homep1,1000);
   setTimeout(p1p2,7000);
   setTimeout(p2p3,13000);
   setTimeout(p3p2,19000);
   setTimeout(p2p1,25000);
-  setTimeout(p1home,31000);
+}
+
+// Segunda parte trayecto que se va a repetir constantemente
+function autosinorigen (){
+  setTimeout(p1p2,7000);
+  setTimeout(p2p3,13000);
+  setTimeout(p3p2,19000);
+  setTimeout(p2p1,25000);
 }
 
 /* Movimientos para la función de automatico */
@@ -92,6 +106,7 @@ function homep1() {
   if (quieto == false) {
   document.getElementById("train").style.animation = 'home-p1 5s'
   document.getElementById("train").style.animationFillMode = 'forwards';
+  parada = 1;
   }
   else parada = 0;
 }
@@ -100,6 +115,7 @@ function p1p2() {
   if (quieto == false) {
   document.getElementById("train").style.animation = 'p1-p2 5s'
   document.getElementById("train").style.animationFillMode = 'forwards';
+  parada = 2;
   }
   else parada = 1;
 }
@@ -108,6 +124,7 @@ function p2p3() {
   if (quieto == false) {
   document.getElementById("train").style.animation = 'p2-p3 5s'
   document.getElementById("train").style.animationFillMode = 'forwards';
+  parada = 3;
   }
   else parada = 2;
 }
@@ -116,6 +133,7 @@ function p3p2() {
   if (quieto == false) {
   document.getElementById("train").style.animation = 'p3-p2 5s'
   document.getElementById("train").style.animationFillMode = 'forwards';
+  parada = 2;
   }
   else parada = 3;
 }
@@ -124,6 +142,7 @@ function p2p1() {
   if (quieto == false) {
   document.getElementById("train").style.animation = 'p2-p1 5s'
   document.getElementById("train").style.animationFillMode = 'forwards';
+  parada = 1;
   }
   else parada = 2;
 }
@@ -132,6 +151,7 @@ function p1home() {
   if (quieto == false) {
   document.getElementById("train").style.animation = 'p1-home 5s'
   document.getElementById("train").style.animationFillMode = 'forwards';
+  parada = 0;
   }
   else parada = 1;
 }
