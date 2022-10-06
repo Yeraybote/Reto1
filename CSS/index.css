@@ -93,6 +93,7 @@ input[type=button] {
 input[type=button]:hover {
 	animation: vuelta 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) reverse both;
 }
+
 .error {
 	color: red;
 	text-decoration:underline;
