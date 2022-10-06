@@ -1,3 +1,9 @@
+
+/**
+* @author Grupo 1, 142GA DAW <wat2022.wordpress.com>
+* 
+**/
+
 /******************* BOTÓN AUTO + MANUAL ************************/
 // Eventos
 var boton_label = document.getElementById("boton-label");

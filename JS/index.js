@@ -1,3 +1,9 @@
+/**
+* @author Grupo 1, 142GA DAW <wat2022.wordpress.com>
+* 
+**/
+
+
 // Boton del ojo, mostraremos el campo de la contraseña
 function mostrarContrasena(){
     var tipo = document.getElementById("pass");
