@@ -16,6 +16,7 @@ if(boton_label) {
             bot2.onclick = true;
             bot3.onclick = true;
         } else {
+            quieto = true;
             //console.log("Checkbox is not checked..");
             document.getElementById("manual").style.visibility = "visible";  
             document.getElementById("automatico").style.visibility = "hidden";
