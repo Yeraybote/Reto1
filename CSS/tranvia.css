@@ -320,9 +320,9 @@
 /********************  ANIMACIÓN TRANVIA P1-Home *********************/
 /* 
 1 % --> Inicio
-22% --> Primera parada
-47% --> Segunda parada
-73% --> Tercera parada
+33% --> Primera parada
+50% --> Segunda parada
+74% --> Tercera parada
 */
 @keyframes p1-home {
     from {left: 33%;}
