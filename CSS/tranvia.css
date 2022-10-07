@@ -1,0 +1,385 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.contenedor-principal{
+    max-width: 100%;
+    height: 300px;
+    border: 8px solid white;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    overflow: hidden;
+    position: relative;
+    /*transform: rotate(-90deg);*/
+}
+
+/*Linea marcador de  paradas*/
+.via{
+    transform: scale(0.355);
+    position: relative;
+    transform: 0.2s;
+    left: 1%;
+}
+.via > .tranvia-movil{
+    position: absolute;
+    bottom: 50;
+    z-index: 1;
+    left: 33.5%;
+}
+.tranvia-movil{
+    position: scale(0.8);
+    position: relative;
+
+}
+.tranvia-movil > .linea-arriba{
+    height: 4px;
+    background-color: #494c51;
+    width: 12000%;
+    position: absolute;
+    top: -67px;
+    transform: translateX(-50%);
+}
+.tranvia-movil >.cable-conexion{
+    position: absolute;
+    top: -116px;
+    right: 280px;
+    transform: translateY(38px);
+}
+.tranvia-movil >.cable-conexion >.line{
+    background-color: #494c51;
+    height: 58px;
+    width: 4px;
+    transform: rotate(50deg);
+    position: relative;
+}
+.tranvia-movil >.cable-conexion >.line:first-child::before{
+    content: '';
+    height: 4px;
+    width: 10px;
+    background-color: #494c51;
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: -2.5px;
+    transform: rotate(-8deg);
+}
+.tranvia-movil >.cable-conexion >.line:last-child{
+    transform: rotate(-50deg) translate(18px,-14px);
+}
+.tranvia-movil > .cuerpo-tranvia{
+    display: flex;
+    position: relative; 
+}
+.tranvia-movil > .cuerpo-tranvia::before{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 93.5%;
+    right: 0;
+    top: -4px;
+    border-bottom: 4px solid #176c29;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    z-index: -1;
+}
+.tranvia-movil >.cuerpo-tranvia> .vagones{
+    display: flex;
+}
+.cabeza-tranvia{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.cabeza-tranvia.-reverso{
+    transform: scaleX(-1);
+}
+.cabeza-tranvia > .top{
+    height: 0;
+    width: 44px;
+    border-top: 20px solid #fafafa;
+    border-left: 12px solid transparent;
+    flex: 0 20px;
+    position: relative;
+}
+.cabeza-tranvia > .top::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: -12px;
+    right: 0;
+    width: 10px;
+    height: 4px;
+    background-color: #494c51;
+}
+.cabeza-tranvia >.morro{
+    height: 0;
+    width: 44px;
+    border-top:32px solid #fafafa;
+    border-left: 4px solid transparent;
+    flex: 0 32px;
+}
+.cabeza-tranvia > .papada{
+    flex: 0 20px;
+    width: 40px;
+    border-top:20px solid #606874;
+    border-left: 38px solid transparent;
+}
+.ventanal{
+    display: flex;
+    align-items: stretch;
+}
+.ventanal >.panel{
+    background-color: #fafafa;
+    width: 4px;
+}
+.cristal-ventanal{
+    width: 32px;
+    border-bottom: 3px solid #494c51;
+    border-right: 12px solid #494c51;
+    border-top-right-radius: 8px;
+    position: relative;
+}
+.cristal-ventanal > .cristal {
+    flex: 0 60px;
+    width: 29px;
+    border-bottom: 57px solid #b3b8cc;
+    border-left: 18px solid transparent;
+    border-top-right-radius: 8px;
+}
+.cristal-ventanal::after {
+    content: '';
+    height: 60px;
+    width: 8px;
+    background-color: #fafafa;
+    position: absolute;
+    top: 0;
+    right: -12px;
+    z-index: -1;
+}
+.partes-vagon {
+    background-color: #fafafa;
+    width: 260px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+}
+.partes-vagon > .techo {
+    background-color: #494c51;
+    height: 4px;
+    width: 100%;
+    margin-top: 8px;
+    flex: 0 4px;
+}
+.cuerpo-tranvia{
+    flex: 1;
+    display: flex;
+}
+.cuerpo-tranvia > .puerta {
+    display: flex;
+    margin-top: 6px;
+    border-top: 2px solid #494c51;
+    border-bottom: 4px solid #606874;
+    flex: 0;
+}
+.panel{
+	 flex: 1;
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: space-between;
+}
+.fila-ventanas{
+    margin-top: 6px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex: 0 66px;
+}
+.fila-ventanas > .ventana {
+    overflow: hidden;
+    border-radius: 10px;
+    border: 3px solid #494c51;
+    height: 60px;
+    width: 50%;
+    margin-right: 4px;
+    display: flex;
+    flex-direction: column;
+}
+.fila-ventanas > .ventana > .ventana-arriba {
+    height: 50%;
+    background-image: repeating-linear-gradient(-32deg, transparent, transparent 70%, #fff 70%, #fff 74%, transparent 74%, transparent), linear-gradient(to bottom, #8e96b3 32%, #b3b8cc);
+    animation: 2s reflections linear infinite;
+    background-size: 120% 58px;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    overflow-Y: hidden;
+}
+.fila-ventanas> .ventana > .ventana-abajo {
+    flex: 1;
+    background-image: repeating-linear-gradient(-32deg, transparent, transparent 70%, #fff 70%, #fff 74%, transparent 74%, transparent), linear-gradient(to bottom, #8e96b3 32%, #b3b8cc);
+    animation: 2s reflections linear infinite;
+    background-size: 120% 58px;
+    border-top: 2px solid #494c51;
+    border-left: 2px solid #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.fila-ventanas > .ventana:last-child {
+    margin-right: 0;
+}
+.parte-baja{
+    flex: 0 20px;
+    background-color: #606874;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+}
+.parte-baja::before {
+    content: '';
+    position: absolute;
+    width: 68px;
+    height: 68px;
+    bottom: -6px;
+    left: 8%;
+    border-radius: 50%;
+    background-color: #222832;
+    z-index: -1;
+}
+.parte-baja::after {
+    content: '';
+    position: absolute;
+    width: 68px;
+    height: 68px;
+    bottom: -6px;
+    right: 8%;
+    border-radius: 50%;
+    background-color: #222832;
+    z-index: -1;
+}
+.panel-puerta {
+    width: 24px;
+    border-left: 6px solid #494c51;
+    border-right: 2px solid #494c51;
+    border-bottom: 2px solid #494c51;
+    background-image: linear-gradient(to bottom, #176c29 16%,  #2cc14c 16%);
+    display: flex;
+    flex-direction: column;
+}
+.panel-puerta:nth-child(2n){
+    transform: scaleX(-1);
+}
+.panel-puerta > .cristal {
+    background-color: #b3b8cc;
+    margin-left: 4px;
+    margin-top: 8px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    flex: 1;
+    border-top: 1px solid #494c51;
+    border-left: 1px solid #494c51;
+    border-bottom: 1px solid #494c51;
+}
+.entrepuertas {
+    flex: 1;
+    display: flex;
+}
+.entrepuertas > .puerta {
+    display: flex;
+    margin-top: 6px;
+    border-top: 2px solid #494c51;
+    border-bottom: 4px solid #606874;
+    flex: 0;
+}
+
+@media (min-width: 1250px) {
+    .via{
+        transform: scale(0.355);
+    }
+}
+@media (max-width: 850px) {
+    .via{
+        transform: scale(0.15);
+    }
+}
+
+
+/*******************************************************/
+ @keyframes reflections {
+	 0% {
+		 background-position: 0 0;
+	}
+	 100% {
+		 background-position: 1200% 0;
+	}
+}
+
+
+/********************  ANIMACIÓN TRANVIA P1-Home *********************/
+/* 
+1 % --> Inicio
+33% --> Primera parada
+50% --> Segunda parada
+74% --> Tercera parada
+*/
+@keyframes p1-home {
+    from {left: 33%;}
+    to {left: 1%;}
+}
+
+@keyframes p2-home {
+    from {left: 50%;}
+    to {left: 1%;}
+}
+
+@keyframes p3-home {
+    from {left: 74%;}
+    to {left: 1%;}
+}
+
+@keyframes home-p1 {
+    from {left: 1%;}
+    to {left: 33%;}
+}
+
+@keyframes home-p2 {
+    from {left: 1%;}
+    to {left: 50%;}
+}
+
+@keyframes home-p3 {
+    from {left: 1%;}
+    to {left: 74%;}
+}
+
+@keyframes p2-p1 {
+    from {left: 50%;}
+    to {left: 33%;}
+}
+
+@keyframes p3-p1 {
+    from {left: 74%;}
+    to {left: 33%;}
+}
+
+@keyframes p1-p2 {
+    from {left: 33%;}
+    to {left: 50%;}
+}
+
+@keyframes p3-p2 {
+    from {left: 74%;}
+    to {left: 50%;}
+}
+
+@keyframes p1-p3 {
+    from {left: 33%;}
+    to {left: 74%;}
+}
+
+@keyframes p2-p3 {
+    from {left: 50%;}
+    to {left: 74%;}
+}

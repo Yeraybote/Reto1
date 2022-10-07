@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Login - Tranv&iacute;a</title>
+<meta charset="UTF-8" />
+<meta name="keywords" content="inicio de sesión" />
+<meta name="description" content="Formulario de inicio de sesión" />
+<meta name="author" content="WAT" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="./CSS/index.css"  type="text/css">
+<link rel="stylesheet" href="./CSS/footer.css"  type="text/css">
+<link rel="icon" type="image/png" href="./MEDIA/IMAGENES/favicon.png"/>
+<script src="https://kit.fontawesome.com/492d3aa907.js" crossorigin="anonymous"></script>
+<script src="./JS/index.js"></script>
+</head>
+<body>
+    
+    <main>
+        <div id="fondo"> </div>
+        <form method="post">
+            <h1>Iniciar sesi&oacute;n</h1>
+            <input type="text" name="user" id="user" placeholder="&#128100;  Nº de Trabajador" class="usuario" required> <br><br>
+            <input type="password" name="pass" id="pass" placeholder="&#128273;  Contrase&ntilde;a" class="contra" required>
+            <button type="button" onclick="mostrarContrasena()" value="&#128065;" class="ojo">&#128065;</button>
+            <br>
+            <p id="merror" class="error">Usuario y/o contrase&ntilde;a no valido</p>
+            <input type="button" value="Iniciar sesión" onclick="inicioSesion()">
+        </form>
+    </main>
+
+    <footer class="pie">
+        <div class="parte_empresa">
+            <div id="logo_empresa">
+                <a href="http://wat2022.worpress.com/" target="_blank">
+                    <img src="../MEDIA/LOGOS/logo_provisional.png" alt="logo de la empresa">
+                </a>
+                <p>Tranv&iacute;a de Vitoria-Gasteiz</p>
+            </div>
+            <div class="redes">
+                <span>
+                    <i  id="fb" class="fa-brands fa-facebook"> </i>
+                    <i  id="tw" class="fa-brands fa-twitter"> </i>
+                    <i  id="in" class="fa-brands fa-instagram"> </i>
+                    <i  id="lin" class="fa-brands fa-linkedin"></i>
+                </span>
+             </div>
+        </div>
+        <hr>
+        <div class="seccion">
+            <div>
+                <h2>COMPAÑ&Iacute;A</h2>
+                <a href="#">HOME</a>
+                <a href="#">CONTACTO</a>
+                <a href="#">BLOG</a>
+            </div>
+            <div>
+                <h2>SERVICIOS</h2>
+                <a href="#">INFORMACI&Oacute;N TUR&Iacute;STICA</a>
+                <a href="#">MUSEO VASCO DEL FERROCARRIL</a>
+                <a href="#">EUSKOTREN KARGO</a>
+            </div>
+            <div>
+                <h2>ATENCI&Oacute;N AL CLIENTE</h2>
+                <a href="#">OFICINA DE ATENCI&Oacute;N A CLIENTES</a>
+                <a href="#">+34 95 675 23 11</a>
+            </div>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1cy9PL1uqSIbdgxHsNXo-rZbthcA&hl=es&ehbc=2E312F"></iframe>
+          </div>
+         
+         <hr>
+         <div class="derechos">
+            <ul>
+                <li>
+                    <a href="#">Pol&iacute;tica de privacidad |</a>
+                </li>
+                <li>
+                    <a href="#">Informaci&oacute;n legal |</a>
+                </li>
+                <li>
+                    <a href="#">Cookies |</a>
+                </li>
+                <li>
+                    <a href="#">Pol&iacute;tica de privacidad |</a>
+                </li>
+                <li>
+                    <a href="#">Transparencia |</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
