@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="../JS/desplegable.js"></script>
+    <link rel="stylesheet" href="../CSS/fonts.css">
+    <link rel="stylesheet" href="../CSS/style.css" type="text/css">
+    <link rel="stylesheet" href="../CSS/footer.css"  type="text/css">
+    <link rel="icon" type="image/png" href="../MEDIA/IMAGENES/favicon.png">
+    <script src="https://kit.fontawesome.com/492d3aa907.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Inicio - Tranv&iacute;a</title>
+</head>
+<body>
+    <!--CABECERA-->
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="check-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <a  class="enlace" href="#" >
+                <img src="../MEDIA/IMAGENES/entrenar.png" alt="imagen tranvia" class="logo_h">
+            </a>
+            <ul class="menu-nav">
+                <li><a class="activo" href="./inicio.html">INICIO</a></li>
+                <li><a href="./mapa.html">MAPA</a></li>
+                <li class="checked"><a href="#">PARADAS <span class="icon-menu3"></span></a>
+                    <ul class="submenu">
+                        <li><a href="../MEDIA/PDF/abetxukoflorida.pdf">LINEA 1</a></li>
+                        <li><a href="../MEDIA/PDF/ibaiondounibertsitatea.pdf">LINEA 2</a></li>
+                    </ul>
+                </li>
+             </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        
+        <section id="origen-destino"> 
+            <div class="parte-izquierda">
+            <form action="#" method="get">
+                <label for="origen"> Estacion origen </label> <br>
+                <select id="origen" name="origen" size="1" class="caja">
+                    <option selected hidden>Selecione una estacion</option> 
+                    <optgroup label="Todas las Paradas" id="linea1"> </optgroup>
+                </select>
+                <br>
+                <label for="destino"> Estacion destino </label> <br>
+                <select id="destino" name="destino" size="1" class="caja">
+                    <option selected hidden>Selecione un destino</option> 
+                    <option value="Abetxuko" id="destino1"> &nbsp; Abetxuko</option>
+                    <option value="Ibaiondo" id="destino2"> &nbsp; Ibaiondo</option>
+                    <option value="Florida" id="destino3"> &nbsp; Florida</option>
+                    <option value="Universidad" id="destino4"> &nbsp; Universidad</option>
+                </select>
+
+                <input type="button" value="Cambiar Estaciones" class="boton" onclick="location.reload()">
+
+                <br>
+
+                <label for="cuando"> Cuando </label> <br>
+                <select id="cuando" name="cuando" size="1">
+                    <option value="viajar_ahora" selected>Viajar ahora</option>
+                    <option value="planificar"> Planificar viaje</option>
+                </select>
+
+                <label for="fecha"> Fecha </label>
+                <input type="date" id="fecha" name="date_control" class="input_f">
+                </div>
+                <br>
+                <div id="reloj">
+                <label for="d_horario"> Horarios </label>
+                    <h1 id="hora"></h1>
+                </div>
+                <br>
+
+                <input type="button" value="Consultar" id="consultar">
+        
+            </form>
+        </section>
+
+
+        <article id="resultados-busqueda">
+
+        </article>
+
+        <script type="text/javascript" src="../JS/desplegable.js"></script>
+    </main>
+
+    <footer class="pie">
+        <div class="parte_empresa">
+            <div id="logo_empresa">
+                <a href="http://wat2022.worpress.com/" target="_blank">
+                    <img src="../MEDIA/LOGOS/logo_provisional.png" alt="logo de la empresa">
+                </a>
+                <p>Tranv&iacute;a de Vitoria-Gasteiz</p>
+            </div>
+            <div class="redes">
+                <span>
+                    <i  id="fb" class="fa-brands fa-facebook"> </i>
+                    <i  id="tw" class="fa-brands fa-twitter"> </i>
+                    <i  id="in" class="fa-brands fa-instagram"> </i>
+                    <i  id="lin" class="fa-brands fa-linkedin"></i>
+                </span>
+             </div>
+        </div>
+        <hr>
+        <div class="seccion">
+            <div>
+                <h2>COMPAÑ&Iacute;A</h2>
+                <a href="#">HOME</a>
+                <a href="#">CONTACTO</a>
+                <a href="#">BLOG</a>
+            </div>
+            <div>
+                <h2>SERVICIOS</h2>
+                <a href="#">INFORMACI&Oacute;N TUR&Iacute;STICA</a>
+                <a href="#">MUSEO VASCO DEL FERROCARRIL</a>
+                <a href="#">EUSKOTREN KARGO</a>
+            </div>
+            <div>
+                <h2>ATENCI&Oacute;N AL CLIENTE</h2>
+                <a href="#">OFICINA DE ATENCI&Oacute;N A CLIENTES</a>
+                <a href="#">+34 95 675 23 11</a>
+            </div>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1cy9PL1uqSIbdgxHsNXo-rZbthcA&hl=es&ehbc=2E312F"></iframe>
+          </div>
+         
+         <hr>
+         <div class="derechos">
+            <ul>
+                <li>
+                    <a href="#">Pol&iacute;tica de privacidad |</a>
+                </li>
+                <li>
+                    <a href="#">Informaci&oacute;n legal |</a>
+                </li>
+                <li>
+                    <a href="#">Cookies |</a>
+                </li>
+                <li>
+                    <a href="#">Pol&iacute;tica de privacidad |</a>
+                </li>
+                <li>
+                    <a href="#">Transparencia |</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>

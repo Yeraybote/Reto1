@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+     <meta charset="UTF-8" />
+    <meta name="keywords" content="tus palabras clave, aqui" />
+    <meta name="description" content="breve descripcion del sitio" />
+    <meta name="author" content="autor del documento" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../MEDIA/IMAGENES/favicon.png">
+    <link rel="stylesheet" href="../CSS/fonts.css">
+    <link rel="stylesheet" href="../CSS/style.css"  type="text/css">
+    <link rel="stylesheet" href="../CSS/footer.css"  type="text/css">
+    <link rel="stylesheet" href="../CSS/tranvia.css" type="text/css">
+    <link rel="stylesheet" href="../CSS/timeline.css" type="text/css">
+    <script src="https://kit.fontawesome.com/492d3aa907.js" crossorigin="anonymous"></script>
+    <title>Mapa - Tranv&iacute;a</title>
+</head>
+<body>
+    <header>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="check-btn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <a  class="enlace" href="#" >
+                    <img src="../MEDIA/IMAGENES/entrenar.png" alt="imagen tranvia" class="logo_h">
+                </a>
+                <ul class="menu-nav">
+                    <li><a href="./inicio.html">INICIO</a></li>
+                    <li><a class="activo" href="./mapa.html">MAPA</a></li>
+                    <li class="checked"><a href="#">PARADAS <span class="icon-menu3"></span></a>
+                        <ul class="submenu">
+                            <li><a href="../MEDIA/PDF/abetxukoflorida.pdf">LINEA 1</a></li>
+                            <li><a href="../MEDIA/PDF/ibaiondounibertsitatea.pdf">LINEA 2</a></li>
+                        </ul>
+                    </li>
+                 </ul>
+            </nav>
+        </header>
+    
+        <main>
+            <article class="variables">
+                <div id="modoUso">
+                    <div class="boton-selector">
+                        <form method="post" action="#" id="boton_uso" name="f_automatico">
+
+                            <h1 id = "automatico">AUTOMATICO</h1>
+                            <!--<label for="boton-label" id="automatico">AUTOMATICO</label>-->
+                            <!-- Checkbox -->
+                            <input type="checkbox" name="boton" id="boton-label" class="boton__checkbox" checked>
+                            <!-- Botón -->
+                            <label for="boton-label" class="boton__label"></label>
+                            <h1 id = "manual">MANUAL</h1>
+                            <!--<label for="manual" id="manual">MANUAL</label>-->
+                        </form>
+                    </div>
+                </div>
+                <div id="estados">
+                    <table>
+                        <tr>
+                            <td>
+                                <form method="post" action="#" id="marcha" name="marcha">
+                                    <input type="button" value="marcha">
+                                    <input type="hidden" name='"WEB".marcha' value="1">
+                                    <input type="hidden" name='"WEB".paro' value="0">
+                                </form>
+                            </td>
+                            <td>
+                                <form method="post" action="#" id="paro" name="paro">
+                                    <input type="button" value="paro">
+                                    <input type="hidden" name='"WEB".marcha' value="0">
+                                    <input type="hidden" name='"WEB".paro' value="1">
+                                </form>
+                            </td>
+                            <td>
+                                <form method="post" action="#" id="emergencia" name="emergencia">
+                                    <input type="button" value="emergencia">
+                                    <input type="hidden" name='"WEB".emergencia' value="1"> 
+                                    <input type="hidden" name='"WEB".emergencia' value="0"> 
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                </div>      
+            </article> 
+            <article>
+                <div class="contenedor-principal">
+                    <div class="via" id="train">
+                            <div class="tranvia-movil">
+                                <div class="linea-arriba"></div>
+                                <div class="cable-conexion">
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                </div><!--fin del cable-conexion-->
+                                <div class="cuerpo-tranvia">
+                                    <div class="cabeza-tranvia">
+                                        <div class="top"></div>
+                                        <div class="ventanal">
+                                            <div class="cristal-ventanal">
+                                                <div class="cristal"></div>
+                                            </div>
+                                            <div class="panel"></div>
+                                        </div><!--fin de ventanal-->
+                                        <div class="morro"></div>
+                                        <div class="papada"></div>
+                                    </div>
+                                    <div class="vagones">
+                                        <div class="partes-vagon">
+                                            <div class="techo"></div> 
+                                            <div class="entrepuertas">
+                                                <div class="puerta">
+                                                    <div class="panel-puerta">
+                                                        <div class="cristal"></div>
+                                                    </div>
+                                                    <div class="panel-puerta">
+                                                        <div class="cristal"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel">
+                                                    <div class="fila-ventanas">
+                                                        <div class="ventana">
+                                                            <div class="ventana-arriba"></div> 
+                                                            <div class="ventana-abajo"></div>
+                                                        </div>
+                                                        <div class="ventana">
+                                                            <div class="ventana-arriba"></div> 
+                                                            <div class="ventana-abajo"></div>
+                                                        </div>      
+                                                    </div>
+                                                    <div class="parte-baja"></div>
+                                                </div> 
+                                                <div class="puerta">
+                                                    <div class="panel-puerta">
+                                                        <div class="cristal"></div>
+                                                    </div>
+                                                    <div class="panel-puerta">
+                                                        <div class="cristal"></div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div><!--fin de vagones-->
+                                    <div class="vagones">
+                                        <div class="partes-vagon">
+                                        <div class="techo"></div> 
+                                        <div class="entrepuertas">
+                                            <div class="puerta">
+                                                <div class="panel-puerta">
+                                                    <div class="cristal"></div>
+                                                </div>
+                                                <div class="panel-puerta">
+                                                    <div class="cristal"></div>
+                                                </div>
+                                            </div>
+                                            <div class="panel">
+                                                <div class="fila-ventanas">
+                                                    <div class="ventana">
+                                                        <div class="ventana-arriba"></div> 
+                                                        <div class="ventana-abajo"></div>
+                                                    </div>
+                                                    <div class="ventana">
+                                                        <div class="ventana-arriba"></div> 
+                                                        <div class="ventana-abajo"></div>
+                                                    </div>      
+                                                </div>
+                                                <div class="parte-baja"></div>
+                                            </div> 
+                                            <div class="puerta">
+                                                <div class="panel-puerta">
+                                                    <div class="cristal"></div>
+                                                </div>
+                                                <div class="panel-puerta">
+                                                    <div class="cristal"></div>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        
+                                        </div>
+                                    </div><!--fin de vagones-->
+                                    <div class="cabeza-tranvia -reverso">
+                                        <div class="top"></div>
+                                        <div class="ventanal">
+                                            <div class="cristal-ventanal">
+                                                <div class="cristal"></div>
+                                            </div>
+                                            <div class="panel"></div>
+                                        </div><!--fin de ventanal-->
+                                        <div class="morro"></div>
+                                        <div class="papada"></div>
+                                    </div>
+                                </div><!--fin del cuerpo tranvia-->
+                                <div class="via"></div>
+                            </div><!--fin del tranvia movil-->
+                    </div>
+                
+
+
+
+                 
+                    <div class="flex-parent">
+                        <div class="input-flex-container">
+                            <div class="input active" id="estaciones" onclick="moverhome()">
+                                <span data-id="1" data-info="Origen"></span>
+                            </div>
+                            <div class="input active" id="estaciones1" onclick="moverp1()">
+                                <span data-id="2" data-info="Parada_1"></span>
+                            </div>
+                            <div class="input active" id="estaciones2" onclick="moverp2()">
+                                <span data-id="3" data-info="Parada_2"></span>
+                            </div>
+                            <div class="input active" id="estaciones3" onclick="moverp3()">
+                                <span data-id="4" data-info="Destino"></span>
+                            </div>		
+                        </div>
+                        <div class="description-flex-container">
+                            <p class="active">Cocheras de trenes</p>
+                            <p>Estacion a 8km de la cochera</p>
+                            <p>Estacion a 25km de la cochera. 17km de Parada_2</p>
+                            <p>Estacion a 42km de la cochera. 17km de Destino</p> 
+                        </div>
+                    </div>   
+    
+                     
+                </div> <!--fin del contenedor principal-->        
+            </article> 
+       
+    </main>
+
+    <footer class="pie">
+        <div class="parte_empresa">
+            <div id="logo_empresa">
+                <a href="http://wat2022.worpress.com/" target="_blank">
+                    <img src="../MEDIA/LOGOS/logo_provisional.png" alt="logo de la empresa">
+                </a>
+                <p>Tranv&iacute;a de Vitoria-Gasteiz</p>
+            </div>
+            <div class="redes">
+                <span>
+                    <i  id="fb" class="fa-brands fa-facebook"> </i>
+                    <i  id="tw" class="fa-brands fa-twitter"> </i>
+                    <i  id="in" class="fa-brands fa-instagram"> </i>
+                    <i  id="lin" class="fa-brands fa-linkedin"></i>
+                </span>
+             </div>
+        </div>
+        <hr>
+        <div class="seccion">
+            <div>
+                <h2>COMPAÑ&Iacute;A</h2>
+                <a href="#">HOME</a>
+                <a href="#">CONTACTO</a>
+                <a href="#">BLOG</a>
+            </div>
+            <div>
+                <h2>SERVICIOS</h2>
+                <a href="#">INFORMACI&Oacute;N TUR&Iacute;STICA</a>
+                <a href="#">MUSEO VASCO DEL FERROCARRIL</a>
+                <a href="#">EUSKOTREN KARGO</a>
+            </div>
+            <div>
+                <h2>ATENCI&Oacute;N AL CLIENTE</h2>
+                <a href="#">OFICINA DE ATENCI&Oacute;N A CLIENTES</a>
+                <a href="#">+34 95 675 23 11</a>
+            </div>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1cy9PL1uqSIbdgxHsNXo-rZbthcA&hl=es&ehbc=2E312F"></iframe>
+          </div>
+         
+         <hr>
+         <div class="derechos">
+            <ul>
+                <li>
+                    <a href="#">Pol&iacute;tica de privacidad |</a>
+                </li>
+                <li>
+                    <a href="#">Informaci&oacute;n legal |</a>
+                </li>
+                <li>
+                    <a href="#">Cookies |</a>
+                </li>
+                <li>
+                    <a href="#">Pol&iacute;tica de privacidad |</a>
+                </li>
+                <li>
+                    <a href="#">Transparencia |</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../JS/tranvia.js"></script>
+    <script src="../JS/timeline.js"></script>
+    <script src="../JS/enviar_recibir.js"></script>
+</body>
+
+</html>
