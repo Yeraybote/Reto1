@@ -1,4 +1,11 @@
-        //EVENTOS el primero afecta a toda la pagina y el segundo a un boton.
+/**
+* @author Grupo 1, 142GA DAW <wat2022.wordpress.com>
+* 
+**/
+
+
+
+//EVENTOS el primero afecta a toda la pagina y el segundo a un boton.
         document.addEventListener('DOMContentLoaded', flinea1); 
         document.getElementById("consultar").addEventListener("click",fdestino);
 
