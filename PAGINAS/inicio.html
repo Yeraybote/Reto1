@@ -81,7 +81,7 @@
                     <option value="Universidad" id="destino4"> &nbsp; Universidad</option>
                 </select>
 
-                <input type="button" value="Cambiar Estaciones" class="boton">
+                <input type="button" value="Cambiar Estaciones" class="boton" onclick="location.reload()">
 
                 <br>
 
@@ -95,14 +95,13 @@
                 <input type="date" id="fecha" name="date_control" class="input_f">
 
                 <br>
+                <div id="reloj">
                 <label for="d_horario"> Horarios </label>
-                <input type="time" id="horario1" name="d_horario" class="input_f" />
-                <input type="time" id="horario2" name="h_horario" class="input_f" />
-                <input type="time" id="horario3" name="d_horario" class="input_f" />
-                <input type="time" id="horario4" name="h_horario" class="input_f" />
+                    <h1 id="hora"></h1>
+                </div>
                 <br>
 
-                <input type="button" value="Consultar">
+                <input type="button" value="Consultar" id="consultar">
         
             </form>
         </section>
