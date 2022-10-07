@@ -226,3 +226,20 @@ table {
 .boton-selector .boton__checkbox:checked + .boton__label:before {
     transform: translateX(2rem);
 }
+
+#origen-destino{
+    border: 1px solid black;
+    height: 250px;
+    padding: 2%;
+    width: 100%;
+}
+
+ #reloj{
+    width: 40%;
+    float: right;
+}
+
+.parte-izquierda {
+    width: 60%;
+    float: left;
+}
