@@ -31,7 +31,7 @@ function inicioSesion(){
                else
                     window.open("./paginas/inicio.html", "_self");
     } catch(e) {
-       alert(e); 
+       console.log(e); 
     }
 }
 
