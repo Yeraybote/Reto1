@@ -27,7 +27,7 @@
 		receivedData = await fetch("API.html").then((response) => response.json()).then((data) =>{return data});
 	//Pero en el caso en el cual hay un error atrápalo con catch.	
 	} catch(e) {
-		alert(e);
+		console.log(e);
 	}
 	 //Procesar los datos y
 	// Si es resuelta, entonces ejecuta estas funciones
@@ -74,7 +74,7 @@ async function sendDataMarcha () {
 		.then((data) =>{return data});
 	//Pero en el caso en el cual hay un error atrápalo con catch.
 	} catch(e) {
-		alert(e);
+		console.log(e);
 	}
 	 //Procesar los datos y
 	// Si es resuelta, entonces ejecuta estas funciones
@@ -102,7 +102,7 @@ async function sendDataParo () {
 		.then((data) =>{return data});
 	//Pero en el caso en el cual hay un error atrápalo con catch.
 	} catch(e) {
-		alert(e);
+		console.log(e);
 	}
 	//Procesar los datos y
 	// Si es resuelta, entonces ejecuta estas funciones
@@ -129,7 +129,7 @@ async function sendDataEmergencia () {
 		.then((data) =>{return data});
 	//Pero en el caso en el cual hay un error atrápalo con catch.
 	} catch(e) {
-		alert(e);
+		console.log(e);
 	}
 	//Procesar los datos y
 	//Si es resuelta, entonces ejecuta estas funciones
