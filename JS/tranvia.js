@@ -253,3 +253,7 @@ function timeline(id){
 		}
 	}
 };
+
+document.getElementById("marcha").addEventListener("click", automatico);
+document.getElementById("paro").addEventListener("click", paro);
+document.getElementById("emergencia").addEventListener("click", emer);
