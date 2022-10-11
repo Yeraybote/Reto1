@@ -171,6 +171,13 @@ select {
 select:focus { 
     outline: none;
 }
+.caja {
+    margin:5px auto 10px auto;	
+    border:1px solid #d9d9d9;
+    height:30px;
+    overflow: hidden;
+    width: 230px;
+}
 .input_f {
     background: transparent;
     border: none;
