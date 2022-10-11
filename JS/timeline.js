@@ -16,11 +16,14 @@ for (var i = 0; i < inputs.length; i++) {
 
 /*Método para seleccionar y deseleccionar dichos eventos para cada botón*/
 function timeline(){
-	var inputs = document.getElementsByClassName("input");
-	for (var i = 0; i < inputs.length; i++) {
-		inputs.item(i).classList.remove("active");
+	var boton_label = document.getElementById("boton-label");
+	if(boton_label) {
+        if (!boton_label.checked) {
+			var inputs = document.getElementsByClassName("input");
+			for (var i = 0; i < inputs.length; i++) {
+				inputs.item(i).classList.remove("active");
+			}
+			this.classList.add("active");
+		}
 	}
-	this.classList.add("active");
 };
-
-

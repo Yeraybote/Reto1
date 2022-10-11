@@ -168,6 +168,7 @@ function homep1() {
   document.getElementById("train").style.animation = 'home-p1 5s';
   document.getElementById("train").style.animationFillMode = 'forwards';
   parada = 1;
+  timeline(parada);
   }
   else parada = 0;
 }
@@ -178,6 +179,7 @@ function p1p2() {
   document.getElementById("train").style.animation = 'p1-p2 5s';
   document.getElementById("train").style.animationFillMode = 'forwards';
   parada = 2;
+  timeline(parada);
   }
   else parada = 1;
 }
@@ -188,6 +190,7 @@ function p2p3() {
   document.getElementById("train").style.animation = 'p2-p3 5s';
   document.getElementById("train").style.animationFillMode = 'forwards';
   parada = 3;
+  timeline(parada);
   }
   else parada = 2;
 }
@@ -198,6 +201,7 @@ function p3p2() {
   document.getElementById("train").style.animation = 'p3-p2 5s';
   document.getElementById("train").style.animationFillMode = 'forwards';
   parada = 2;
+  timeline(parada);
   }
   else parada = 3;
 }
@@ -208,6 +212,7 @@ function p2p1() {
   document.getElementById("train").style.animation = 'p2-p1 5s';
   document.getElementById("train").style.animationFillMode = 'forwards';
   parada = 1;
+  timeline(parada);
   }
   else parada = 2;
 }
@@ -218,6 +223,7 @@ function p1home() {
   document.getElementById("train").style.animation = 'p1-home 5s';
   document.getElementById("train").style.animationFillMode = 'forwards';
   parada = 0;
+  timeline(parada);
   }
   else parada = 1;
 }
@@ -231,4 +237,19 @@ let paro = function (){
 let emer = function (){
   emergencia = true;
   moverhome();
+};
+
+/************************* Funciones paro y emergencia **************************/
+
+function timeline(id){
+	var boton_label = document.getElementById("boton-label");
+	if(boton_label) {
+        if (!boton_label.checked) {
+			var inputs = document.getElementsByClassName("input");
+			for (var i = 0; i < inputs.length; i++) {
+				inputs.item(i).classList.remove("active");
+			}
+			inputs.item(id).classList.add("active");
+		}
+	}
 };
